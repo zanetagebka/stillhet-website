@@ -11,7 +11,7 @@
   <meta property="og:title" content="{{ site.Title }}">
   <meta property="og:description" content="{{ site.Params.description }}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ "images/forest-v3.jpg" | absURL }}">
+  <meta property="og:image" content="{{ "images/birch-heath-v1.jpg" | absURL }}">
   {{ $style := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   <script id="welcome-data" type="application/json">{{ site.Data.welcome | jsonify | safeJS }}</script>

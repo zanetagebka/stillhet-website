@@ -17,6 +17,10 @@
 /static/images/*
 !/static/images/favicon.svg
 !/static/images/forest-v3.jpg
+!/static/images/birch-heath-v1.jpg
+!/static/images/reindeer-run-outline-v1.png
+!/static/images/reindeer-look-outline-v1.png
+!/static/images/mountain-lakes-v1.jpg
 !/static/images/lake-v2.jpg
 !/static/images/meadow-v4.jpg
 !/static/images/poloniny-v1.jpg

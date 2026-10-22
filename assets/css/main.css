@@ -67,16 +67,16 @@ em { font-weight: 400; }
 .hero-copy { text-align: center; position: relative; z-index: 3; pointer-events: none; }
 .hero-copy a { pointer-events: auto; }
 .hero-copy .eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; color: #737b62; }
-.tiny-sun { font-size: 21px; line-height: 1; color: #7a8567; }
+.tiny-leaf { width: 21px; height: 21px; flex-shrink: 0; color: #7a8567; }
 h1 { font-size: clamp(46px, 5.1vw, 76px); line-height: 1.08; letter-spacing: -3px; margin: 25px auto 20px; }
 h1 > span { display: block; }
 h1 em { position: relative; color: var(--green); white-space: nowrap; }
 h1 em::after { content: ''; position: absolute; bottom: -7px; left: -3px; width: 102%; height: 10px; border-top: 1px solid #788568; border-bottom: 1px solid #78856860; border-radius: 48% 53% 0 0; transform: rotate(-2deg); }
 .hero-description { width: min(410px, 100%); margin-inline: auto; font-size: 13px; line-height: 1.8; color: var(--muted); }
-.hero-cta-row { display: inline-flex; position: relative; align-items: center; justify-content: center; margin-top: 25px; }
+.hero-cta-row { display: inline-flex; position: relative; align-items: center; justify-content: center; margin-top: 55px; }
 .hero-cta-row .button { min-width: 192px; }
-.cta-note { position: absolute; left: calc(100% + 25px); top: 12px; width: 150px; text-align: left; font-size: 16px; color: #747e63; transform: rotate(-7deg); }
-.cta-note::before { content: '↙'; display: inline-block; position: absolute; left: -17px; top: 9px; font: 25px var(--hand); transform: rotate(25deg); }
+.cta-note-arrow { position: absolute; left: calc(100% + 5px); top: calc(50% - 19px); width: 54px; height: 32px; color: #747e63; stroke-width: 1; }
+.cta-note { position: absolute; left: calc(100% + 64px); top: -3px; width: 150px; text-align: left; font-size: 16px; color: #747e63; transform: rotate(-7deg); }
 .hero-landscape { position: relative; margin-top: -34px; width: 100%; height: clamp(300px, 34vw, 490px); z-index: 1; }
 .landscape-image { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; mix-blend-mode: multiply; mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 91%, transparent 100%); transition: opacity .35s ease; }
 .landscape-motion { position: absolute; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: multiply; mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 91%, transparent 100%); transition: opacity .35s ease; }
@@ -85,11 +85,47 @@ h1 em::after { content: ''; position: absolute; bottom: -7px; left: -3px; width:
 .hero-copy h1, .hero-description { transition: opacity .2s, transform .3s; }
 .hero.is-changing .landscape-image { opacity: .22; }
 .hero.is-changing .landscape-motion { opacity: .22; }
-.meadow-life, .hills-life { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; color: #777e66; visibility: hidden; opacity: 0; mix-blend-mode: multiply; transition: opacity .35s ease; mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 91%, transparent 100%); }
-.hero[data-scene="meadow"] .meadow-life, .hero[data-scene="hills"] .hills-life { visibility: visible; opacity: .85; }
-.hero[data-scene="meadow"].is-changing .meadow-life, .hero[data-scene="hills"].is-changing .hills-life { opacity: .22; }
-.hero .meadow-life *, .hero .hills-life * { animation-play-state: paused; }
-.hero .meadow-life.is-running *, .hero .hills-life.is-running * { animation-play-state: running; }
+.forest-life, .meadow-life, .hills-life { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; color: #777e66; visibility: hidden; opacity: 0; mix-blend-mode: multiply; transition: opacity .35s ease; mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 91%, transparent 100%); }
+.hero[data-scene="forest"] .forest-life, .hero[data-scene="meadow"] .meadow-life, .hero[data-scene="hills"] .hills-life { visibility: visible; opacity: .85; }
+.hero[data-scene="forest"].is-changing .forest-life, .hero[data-scene="meadow"].is-changing .meadow-life, .hero[data-scene="hills"].is-changing .hills-life { opacity: .22; }
+.hero .forest-life *, .hero .meadow-life *, .hero .hills-life * { animation-play-state: paused; }
+.hero .forest-life.is-running *, .hero .meadow-life.is-running *, .hero .hills-life.is-running * { animation-play-state: running; }
+.forest-life { --reindeer-stop-x: 1448px; --reindeer-delay: 3s; mix-blend-mode: normal; }
+.hero:not([data-scene="forest"]) .forest-life * { animation-name: none; }
+.reindeer-crossing { transform: translateX(1650px); animation: reindeer-crossing 22s linear var(--reindeer-delay) infinite; }
+.reindeer-solo-crossing { transform: translateX(2350px); animation: reindeer-solo-crossing 22s linear var(--reindeer-delay) infinite; }
+.reindeer-solo-running { animation: reindeer-solo-running 22s steps(1, end) var(--reindeer-delay) infinite; }
+.reindeer-solo-looking { opacity: 0; animation: reindeer-solo-looking 22s steps(1, end) var(--reindeer-delay) infinite; }
+.reindeer-look-frames { animation: reindeer-look 22s steps(1, end) var(--reindeer-delay) infinite; }
+.reindeer-step { animation: reindeer-step .32s ease-in-out infinite; }
+.reindeer-frames { animation: reindeer-gait .64s steps(4, end) infinite; }
+.reindeer-calf { animation-delay: -.08s; }
+.reindeer-calf .reindeer-frames { animation-delay: -.16s; }
+.reindeer-pale { animation-delay: -.16s; }
+.reindeer-pale .reindeer-frames { animation-delay: -.32s; }
+@keyframes reindeer-crossing {
+  0% { transform: translateX(1650px); }
+  100% { transform: translateX(-1750px); }
+}
+@keyframes reindeer-gait { to { transform: translateX(-2000px); } }
+@keyframes reindeer-step { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes reindeer-solo-crossing {
+  0%,12% { transform: translateX(2350px); }
+  34% { transform: translateX(calc(var(--reindeer-stop-x) + 80px)); animation-timing-function: ease-out; }
+  38% { transform: translateX(var(--reindeer-stop-x)); }
+  50% { transform: translateX(var(--reindeer-stop-x)); animation-timing-function: ease-in; }
+  54% { transform: translateX(calc(var(--reindeer-stop-x) - 80px)); animation-timing-function: linear; }
+  98%,100% { transform: translateX(-180px); }
+}
+@keyframes reindeer-solo-running { 0% { opacity: 1; } 38% { opacity: 0; } 50%,100% { opacity: 1; } }
+@keyframes reindeer-solo-looking { 0% { opacity: 0; } 38% { opacity: 1; } 50%,100% { opacity: 0; } }
+@keyframes reindeer-look {
+  0%,38% { transform: translateX(0); }
+  39% { transform: translateX(-500px); }
+  40%,48% { transform: translateX(-1000px); }
+  49% { transform: translateX(-500px); }
+  49.5%,100% { transform: translateX(0); }
+}
 .meadow-life path { stroke-width: 1.1; }
 .butterfly-wings { fill: #efeddf; stroke: #939b7e; animation: butterfly-flutter .44s ease-in-out infinite alternate; }
 .butterfly-body { stroke: #737b63; fill: none; }
@@ -169,6 +205,7 @@ h1 em::after { content: ''; position: absolute; bottom: -7px; left: -3px; width:
 .scroll-cue { grid-column: 3; display: flex; justify-content: flex-end; gap: 15px; align-items: center; }
 .scroll-cue > span:last-child { font: 21px var(--serif); }
 .sky-life { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero[data-scene="valley"] .sky-life { display: none; }
 .bird { position: absolute; color: #65705a; width: 28px; height: 12px; stroke-width: 1.4; animation: bird-flight 15s ease-in-out infinite alternate; }
 .bird-one { left: 66%; top: 22%; }
 .bird-two { left: 70%; top: 26%; width: 20px; animation-duration: 18s; animation-delay: -7s; }
@@ -212,7 +249,7 @@ h1 em::after { content: ''; position: absolute; bottom: -7px; left: -3px; width:
 .preview-paper::before { content: ''; position: absolute; top: -11px; left: 40%; width: 80px; height: 22px; background: #d8d7bd70; transform: rotate(-5deg); border-inline: 1px dashed #bfc3ad90; }
 .paper-top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid #b7bdaa70; }
 .paper-top .eyebrow { font-size: 8px; letter-spacing: 1.7px; }
-.paper-star { font-size: 25px; color: #8a9478; line-height: 1; }
+.paper-leaf { width: 25px; height: 25px; flex-shrink: 0; color: #8a9478; }
 .preview-paper h3 { margin-block: 23px 20px; font-size: 30px; }
 .nature-options { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; }
 .nature-option { display: block; position: relative; cursor: pointer; }
@@ -294,13 +331,14 @@ html.motion-paused { scroll-behavior: auto; }
   .desktop-nav { display: none; }
   .button-small { font-size: 10px; min-height: 37px; padding-inline: 12px; gap: 9px; }
   .header-actions { gap: 14px; }
+  .motion-toggle { width: 44px; height: 44px; flex-shrink: 0; }
   .hero { padding-top: 44px; }
   .hero .eyebrow { font-size: 8px; letter-spacing: 1.6px; }
   h1 { font-size: clamp(37px, 7.6vw, 57px); letter-spacing: -1.7px; line-height: 1.15; margin-top: 21px; }
   .hero-description { max-width: 350px; font-size: 12px; padding-inline: 8px; }
-  .hero-cta-row { margin-top: 24px; }
+  .hero-cta-row { margin-top: 54px; }
   .hero-cta-row .button { min-width: 180px; min-height: 48px; }
-  .cta-note { display: none; }
+  .cta-note, .cta-note-arrow { display: none; }
   .hero-landscape { height: 275px; width: 135%; margin-left: -18%; margin-top: 5px; }
   .landscape-image { object-fit: cover; }
   .hero-bottom { display: flex; justify-content: center; gap: 15px; padding-bottom: 22px; }
@@ -350,12 +388,12 @@ html.motion-paused { scroll-behavior: auto; }
   h1 { font-size: 34px; letter-spacing: -1.5px; }
   .scene-controls { gap: 0; }
   .scene-dot { width: 25px; }
-  .next-scene, .motion-toggle { width: 27px; }
+  .next-scene { width: 27px; }
   .preview-paper { padding: 18px; }
   .paper-top .eyebrow { font-size: 7px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js .reveal.is-waiting { opacity: 1; transform: none; }
+  html:not(.motion-enabled) { scroll-behavior: auto; }
+  html:not(.motion-enabled) *, html:not(.motion-enabled) *::before, html:not(.motion-enabled) *::after { animation: none !important; transition: none !important; }
+  .js:not(.motion-enabled) .reveal.is-waiting { opacity: 1; transform: none; }
 }

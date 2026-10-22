@@ -8,7 +8,7 @@
     en: {
       skip: 'Skip to content', navLabel: 'Main navigation', navIdea: 'The idea', navHow: 'How it works', navPromise: 'Our promise', navCta: 'A little escape',
       heroEyebrow: 'LESS SCROLLING. MORE WANDERING.', heroCta: 'Find your quiet', heroCtaNote: 'a small step outside', scroll: 'A little further down',
-      carouselDescription: 'carousel', sceneControls: 'Choose a welcome scene', nextScene: 'Next welcome scene', sceneNames: ['Forest welcome', 'Lake welcome', 'Meadow welcome', 'Hills welcome'],
+      carouselDescription: 'carousel', sceneControls: 'Choose a welcome scene', nextScene: 'Next welcome scene', sceneNames: ['Forest welcome', 'Lake welcome', 'Meadow welcome', 'Hills welcome', 'Valley welcome'],
       marginNote: 'a gentler kind\nof getting away', ideaEyebrow: 'HELLO, WE’RE STILLHET.', ideaTitle: 'The world has enough noise.\nLet’s find you a little quiet.',
       ideaBody: 'Some days, you don’t need another recommendation, another list, or another thing to keep up with. You just need somewhere to go.',
       ideaBody2: 'We’re making a small app to help you find peaceful places in nature, close to home. One thoughtful suggestion, so you can stop searching and start being there.', meaning: 'stillhet / Norwegian for quiet, stillness',
@@ -33,14 +33,14 @@
     pl: {
       skip: 'Przejdź do treści', navLabel: 'Nawigacja główna', navIdea: 'Pomysł', navHow: 'Jak to działa', navPromise: 'Nasza obietnica', navCta: 'Mała ucieczka',
       heroEyebrow: 'MNIEJ PRZEWIJANIA. WIĘCEJ WĘDROWANIA.', heroCta: 'Znajdź swój spokój', heroCtaNote: 'mały krok na zewnątrz', scroll: 'Jeszcze kawałek dalej',
-      carouselDescription: 'karuzela', sceneControls: 'Wybierz ekran powitalny', nextScene: 'Następny ekran powitalny', sceneNames: ['Powitanie w lesie', 'Powitanie nad wodą', 'Powitanie na łące', 'Powitanie na wzgórzach'],
+      carouselDescription: 'karuzela', sceneControls: 'Wybierz ekran powitalny', nextScene: 'Następny ekran powitalny', sceneNames: ['Powitanie w lesie', 'Powitanie nad wodą', 'Powitanie na łące', 'Powitanie na wzgórzach', 'Powitanie w dolinie'],
       marginNote: 'łagodniejszy sposób\nna małą ucieczkę', ideaEyebrow: 'CZEŚĆ, JESTEŚMY STILLHET.', ideaTitle: 'Świat ma już dość hałasu.\nZnajdźmy Ci trochę ciszy.',
       ideaBody: 'Są dni, kiedy nie potrzebujesz kolejnej rekomendacji, kolejnej listy ani kolejnej rzeczy do nadrobienia. Potrzebujesz tylko miejsca, do którego możesz pójść.',
       ideaBody2: 'Tworzymy małą aplikację, która pomoże Ci znajdować spokojne miejsca w naturze, blisko domu. Jedna przemyślana propozycja, żeby przestać szukać i po prostu tam być.', meaning: 'stillhet / po norwesku: cisza, wyciszenie',
       howEyebrow: 'TROCHĘ MNIEJ WYSIŁKU.', howTitle: 'Na zewnątrz, w trzech małych krokach.', howIntro: 'Mniej czasu na planowanie. Więcej czasu bez planów.',
       step1Title: 'Czego Ci dzisiaj potrzeba?', step1Body: 'Lasu, trochę wody, otwartego nieba. Wybierz to, do czego Cię ciągnie, i czas na dojazd.', step1Note: 'tu nie ma złych odpowiedzi',
       step2Title: 'Spokojne miejsce dla Ciebie.', step2Body: 'Jedna przemyślana propozycja i kilka potrzebnych wskazówek. Obszar do odkrycia, zamiast punktu, przy którym zbiera się tłum.', step2Note: 'mniej wybierania, więcej bycia',
-      step3Title: 'Odłóż telefon.', step3Body: 'Masz już swoją małą ucieczkę. Zwolnij, rozejrzyj się i zostaw miejsce tak spokojne, jak je zastałaś lub zastałeś.', step3Note: 'będziemy tu, kiedy wrócisz',
+      step3Title: 'Odłóż telefon.', step3Body: 'Spokojne miejsce już czeka. Zwolnij, rozejrzyj się i zadbaj, by zachowało swój spokój.', step3Note: 'będziemy tu, kiedy wrócisz',
       previewEyebrow: 'MAŁY SZKIC TEGO, CO NADCHODZI.', previewTitle: 'Dokąd wędrują\nTwoje myśli?', previewBody: 'Nie musisz znać nazwy miejsca. Wystarczy wiedzieć, jak chcesz się tam poczuć.', previewAnnotation: 'spróbuj przez chwilę pomarzyć →',
       development: 'Stillhet rośnie. Aplikacja jest w trakcie tworzenia.', paperLabel: 'KARTKA Z NASZEGO SZKICOWNIKA', formTitle: 'Trochę więcej…', natureLegend: 'Wybierz rodzaj natury, którego potrzebujesz',
       forest: 'Lasu', lake: 'Wody', meadow: 'Łąki', hills: 'Wzgórz', timeLegend: 'I trochę czasu na dojazd.', minutes: 'min', previewCta: 'Wyobraź sobie małą ucieczkę',
@@ -62,7 +62,7 @@
     set(key, value) { try { localStorage.setItem(key, String(value)); } catch { /* Storage is optional. */ } }
   };
   let language = storage.get('stillhet-language') === 'pl' ? 'pl' : 'en';
-  let motionPaused = storage.get('stillhet-motion-paused') === 'true';
+  let motionPreference = storage.get('stillhet-motion-paused');
   const savedScene = storage.get('stillhet-welcome');
   const lastScene = savedScene === null ? -1 : Number(savedScene);
   let sceneIndex = Number.isInteger(lastScene) && lastScene >= -1 ? (lastScene + 1) % scenes.length : 0;
@@ -77,11 +77,19 @@
   const motionButton = document.getElementById('motion-toggle');
   const breathingDialog = document.getElementById('breathing-dialog');
 
+  function isMotionPaused() {
+    if (motionPreference === 'true') return true;
+    if (motionPreference === 'false') return false;
+    return reducedMotion.matches;
+  }
+
   function updateMotionControl() {
-    root.classList.toggle('motion-paused', motionPaused);
-    motionButton.setAttribute('aria-pressed', String(motionPaused));
-    motionButton.setAttribute('aria-label', copy[language][motionPaused ? 'resumeMotion' : 'pauseMotion']);
-    motionButton.textContent = motionPaused ? '▷' : 'Ⅱ';
+    const paused = isMotionPaused();
+    root.classList.toggle('motion-paused', paused);
+    root.classList.toggle('motion-enabled', motionPreference === 'false');
+    motionButton.setAttribute('aria-pressed', String(paused));
+    motionButton.setAttribute('aria-label', copy[language][paused ? 'resumeMotion' : 'pauseMotion']);
+    motionButton.textContent = paused ? '▷' : 'Ⅱ';
   }
 
   function renderScene(index, announce = false) {
@@ -108,7 +116,7 @@
   function changeScene(index) {
     clearTimeout(transitionTimer);
     if (index === sceneIndex) { hero.classList.remove('is-changing'); return; }
-    if (reducedMotion.matches || motionPaused) { renderScene(index, true); hero.classList.remove('is-changing'); return; }
+    if (isMotionPaused()) { renderScene(index, true); hero.classList.remove('is-changing'); return; }
     hero.classList.add('is-changing');
     transitionTimer = setTimeout(() => {
       renderScene(index, true);
@@ -165,8 +173,12 @@
     applyLanguage();
   });
   motionButton.addEventListener('click', () => {
-    motionPaused = !motionPaused;
-    storage.set('stillhet-motion-paused', motionPaused);
+    motionPreference = String(!isMotionPaused());
+    storage.set('stillhet-motion-paused', motionPreference);
+    updateMotionControl();
+    if (breathingDialog.open) tickBreathing();
+  });
+  reducedMotion.addEventListener('change', () => {
     updateMotionControl();
     if (breathingDialog.open) tickBreathing();
   });
@@ -184,7 +196,7 @@
 
   function tickBreathing() {
     const phase = (Date.now() - breathStart) % 10000;
-    document.getElementById('breathing-instruction').textContent = copy[language][reducedMotion.matches || motionPaused ? 'breatheOwnPace' : phase < 4000 ? 'breatheIn' : 'breatheOut'];
+    document.getElementById('breathing-instruction').textContent = copy[language][isMotionPaused() ? 'breatheOwnPace' : phase < 4000 ? 'breatheIn' : 'breatheOut'];
   }
   document.getElementById('breathe-button').addEventListener('click', () => {
     if (breathingDialog.open) return;
@@ -212,6 +224,7 @@
     const canvas = document.getElementById('landscape-motion');
     const landscape = document.getElementById('hero-landscape');
     const image = document.getElementById('welcome-image');
+    const forestLife = document.getElementById('forest-life');
     const meadowLife = document.getElementById('meadow-life');
     const hillsLife = document.getElementById('hills-life');
     let gl;
@@ -226,6 +239,20 @@
     let elapsed = 0;
     let visible = true;
     let unavailable = false;
+
+    function alignReindeerPause() {
+      const bounds = landscape.getBoundingClientRect();
+      const heroBounds = hero.getBoundingClientRect();
+      const scale = Math.max(bounds.width / 2172, bounds.height / 724);
+      const left = Math.max(bounds.left, heroBounds.left);
+      const right = Math.min(bounds.right, heroBounds.right);
+      if (!scale || right <= left) return;
+      // Account for both the panorama's cover crop and mobile overflow clipping.
+      const coverLeft = (bounds.width - 2172 * scale) / 2;
+      const target = left + (right - left) * 2 / 3;
+      const imageX = (target - bounds.left - coverLeft) / scale;
+      forestLife.style.setProperty('--reindeer-stop-x', `${imageX}px`);
+    }
 
     const vertexSource = `
       attribute vec2 a_position;
@@ -452,8 +479,10 @@
 
     function update() {
       const sceneId = hero.dataset.scene;
+      if (sceneId === 'forest') alignReindeerPause();
       const motionAllowed = visible && !document.hidden
-        && !root.classList.contains('motion-paused') && !reducedMotion.matches;
+        && !isMotionPaused();
+      forestLife.classList.toggle('is-running', sceneId === 'forest' && motionAllowed);
       meadowLife.classList.toggle('is-running', sceneId === 'meadow' && motionAllowed);
       hillsLife.classList.toggle('is-running', sceneId === 'hills' && motionAllowed);
       const enabled = ['lake', 'hills'].includes(sceneId) && motionAllowed;
@@ -491,11 +520,23 @@
     image.addEventListener('load', update);
     image.addEventListener('error', stop);
     canvas.addEventListener('webglcontextlost', event => { event.preventDefault(); unavailable = true; stop(); });
+    canvas.addEventListener('webglcontextrestored', () => {
+      gl = null;
+      program = null;
+      texture = null;
+      uniforms = null;
+      uploadedImage = '';
+      unavailable = false;
+      update();
+    });
     new MutationObserver(update).observe(hero, { attributes: true, attributeFilter: ['data-scene'] });
     new MutationObserver(update).observe(root, { attributes: true, attributeFilter: ['class'] });
     reducedMotion.addEventListener('change', update);
     document.addEventListener('visibilitychange', update);
-    window.addEventListener('pagehide', stop);
+    window.addEventListener('pagehide', () => {
+      for (const layer of [forestLife, meadowLife, hillsLife]) layer.classList.remove('is-running');
+      stop();
+    });
     window.addEventListener('pageshow', update);
     if ('ResizeObserver' in window) new ResizeObserver(update).observe(landscape);
     else window.addEventListener('resize', update);

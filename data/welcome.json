@@ -1,20 +1,20 @@
 [
   {
     "id": "forest",
-    "image": "images/forest-v3.jpg",
+    "image": "images/birch-heath-v1.jpg",
     "en": {
-      "first": "Too much AI?",
+      "first": "Too much about AI?",
       "second": "Try a little",
       "accent": "forest.",
       "description": "When the world gets a little too loud, find a quiet place nearby. A little less screen. A little more green.",
-      "alt": "Light pencil outlines of a few pine trees, an empty winding path and a distant hill."
+      "alt": "Delicate pencil outlines of birches, low heath shrubs, a faint track and a broad rounded ridge, inspired by a photograph of Scandinavian woodland."
     },
     "pl": {
-      "first": "Za dużo AI?",
+      "first": "Za dużo rozmów o AI?",
       "second": "Czas na trochę",
       "accent": "lasu.",
       "description": "Kiedy świat robi się zbyt głośny, znajdź spokojne miejsce blisko siebie. Trochę mniej ekranu. Trochę więcej zieleni.",
-      "alt": "Delikatny szkic kilku sosen, pustej krętej ścieżki i odległego wzgórza."
+      "alt": "Delikatny ołówkowy szkic brzóz, niskich krzewinek, ledwo widocznej drogi i łagodnego wzgórza, inspirowany zdjęciem skandynawskiego lasu."
     }
   },
   {
@@ -67,8 +67,26 @@
       "first": "Lista zadań poczeka.",
       "second": "Wybierz drogę",
       "accent": "do ciszy.",
-      "description": "Otwarte połoniny. Łagodny horyzont. Znajdź trochę przestrzeni na oddech, bez godzin szukania.",
+      "description": "Otwarta przestrzeń. Łagodny horyzont. Znajdź trochę przestrzeni na oddech, bez godzin szukania.",
       "alt": "Delikatny szkic otwartych połonin inspirowanych Bieszczadami: łagodne grzbiety i pojedyncze kępy traw, bez ścieżek i ludzi."
+    }
+  },
+  {
+    "id": "valley",
+    "image": "images/mountain-lakes-v1.jpg",
+    "en": {
+      "first": "You don’t have to go far.",
+      "second": "Quiet can be",
+      "accent": "close to home.",
+      "description": "A quiet moment doesn’t always need a long journey. Sometimes a short walk is enough to find a little room for yourself.",
+      "alt": "Delicate pencil contours of a broad mountain valley, rounded slopes with a few snow patches and a chain of narrow lakes."
+    },
+    "pl": {
+      "first": "Nie zawsze trzeba daleko.",
+      "second": "Czasem wystarczy",
+      "accent": "kilka kroków.",
+      "description": "Chwila ciszy nie zawsze wymaga dalekiej wyprawy. Czasem wystarczy krótki spacer, by znaleźć trochę przestrzeni dla siebie.",
+      "alt": "Delikatne ołówkowe kontury szerokiej górskiej doliny, łagodnych stoków z resztkami śniegu i łańcucha wąskich jezior."
     }
   }
 ]

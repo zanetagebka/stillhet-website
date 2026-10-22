@@ -1,13 +1,41 @@
 <section class="hero" aria-labelledby="welcome-title" aria-roledescription="carousel" data-i18n-roledescription="carouselDescription">
   <div class="hero-copy wrap" id="hero-copy">
-    <p class="eyebrow"><span class="tiny-sun" aria-hidden="true">✳</span><span data-i18n="heroEyebrow">LESS SCROLLING. MORE WANDERING.</span></p>
-    <h1 id="welcome-title"><span id="welcome-first">Too much AI?</span><span class="title-second"><span id="welcome-second">Try a little</span> <em id="welcome-accent">forest.</em></span></h1>
+    <p class="eyebrow"><svg class="tiny-leaf" aria-hidden="true" focusable="false"><use href="#icon-leaf"/></svg><span data-i18n="heroEyebrow">LESS SCROLLING. MORE WANDERING.</span></p>
+    <h1 id="welcome-title"><span id="welcome-first">Too much about AI?</span><span class="title-second"><span id="welcome-second">Try a little</span> <em id="welcome-accent">forest.</em></span></h1>
     <p class="hero-description" id="welcome-description">When the world gets a little too loud, find a quiet place nearby. A little less screen. A little more green.</p>
-    <div class="hero-cta-row"><a class="button button-primary" href="#a-little-preview"><span data-i18n="heroCta">Find your quiet</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></a><span class="handwritten cta-note" data-i18n="heroCtaNote">a small step outside</span></div>
+    <div class="hero-cta-row"><a class="button button-primary" href="#a-little-preview"><span data-i18n="heroCta">Find your quiet</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></a><svg class="cta-note-arrow" viewBox="0 0 54 32" aria-hidden="true" focusable="false"><path d="M51 5C34 0 21 24 4 19m8-7-8 7 10 3"/></svg><span class="handwritten cta-note" data-i18n="heroCtaNote">a small step outside</span></div>
   </div>
   <div class="hero-landscape" id="hero-landscape">
-    <img id="welcome-image" class="landscape-image" src="images/forest-v3.jpg" width="2172" height="724" alt="Light pencil outlines of a few pine trees, an empty winding path and a distant hill." fetchpriority="high" decoding="async">
+    <img id="welcome-image" class="landscape-image" src="images/birch-heath-v1.jpg" width="2172" height="724" alt="Delicate pencil outlines of birches, low heath shrubs, a faint track and a broad rounded ridge." fetchpriority="high" decoding="async">
     <canvas id="landscape-motion" class="landscape-motion" aria-hidden="true" hidden></canvas>
+    <svg id="forest-life" class="forest-life" viewBox="0 0 2172 724" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      <g class="reindeer-crossing">
+        <g transform="translate(700 636)"><g class="reindeer-step">
+          <svg x="-105" y="-130" width="210" height="151.2" viewBox="0 0 500 360" overflow="hidden">
+            <image class="reindeer-frames" href="images/reindeer-run-outline-v1.png" width="2000" height="1080"/>
+          </svg>
+        </g></g>
+        <g transform="translate(920 651)"><g class="reindeer-step reindeer-calf">
+          <svg x="-80" y="-100" width="160" height="115.2" viewBox="0 0 500 360" overflow="hidden">
+            <image class="reindeer-frames" href="images/reindeer-run-outline-v1.png" y="-360" width="2000" height="1080"/>
+          </svg>
+        </g></g>
+      </g>
+      <g class="reindeer-solo-crossing">
+        <g transform="translate(0 640)">
+          <g class="reindeer-solo-running"><g class="reindeer-step reindeer-pale">
+            <svg x="-105" y="-130" width="210" height="151.2" viewBox="0 0 500 360" overflow="hidden">
+              <image class="reindeer-frames" href="images/reindeer-run-outline-v1.png" y="-720" width="2000" height="1080"/>
+            </svg>
+          </g></g>
+          <g class="reindeer-solo-looking" transform="scale(0.675)">
+            <svg x="-105" y="-157" width="210" height="184.8" viewBox="0 0 500 440" overflow="hidden">
+              <image class="reindeer-look-frames" href="images/reindeer-look-outline-v1.png" width="1500" height="440"/>
+            </svg>
+          </g>
+        </g>
+      </g>
+    </svg>
     <svg id="meadow-life" class="meadow-life" viewBox="0 0 2172 724" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
       <defs>
         <g id="meadow-butterfly">
@@ -53,6 +81,7 @@
       <button class="scene-dot" type="button" data-scene="1" aria-label="Lake welcome" aria-pressed="false"><span>02</span></button>
       <button class="scene-dot" type="button" data-scene="2" aria-label="Meadow welcome" aria-pressed="false"><span>03</span></button>
       <button class="scene-dot" type="button" data-scene="3" aria-label="Hills welcome" aria-pressed="false"><span>04</span></button>
+      <button class="scene-dot" type="button" data-scene="4" aria-label="Valley welcome" aria-pressed="false"><span>05</span></button>
       <span class="control-divider" aria-hidden="true"></span>
       <button id="next-scene" class="next-scene" type="button" aria-label="Next welcome scene" data-i18n-aria="nextScene"><svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
       <button id="motion-toggle" class="motion-toggle" type="button" aria-label="Pause animations" aria-pressed="false">Ⅱ</button>
@@ -89,7 +118,7 @@
 <section class="preview-section wrap section-space" id="a-little-preview" aria-labelledby="preview-title">
   <div class="preview-copy reveal"><p class="eyebrow" data-i18n="previewEyebrow">A SMALL GLIMPSE OF WHAT’S COMING.</p><h2 id="preview-title" data-i18n="previewTitle">Where does your<br>mind wander?</h2><p class="body-copy" data-i18n="previewBody">You don’t need to know the name of a place. Just how you’d like to feel when you get there.</p><p class="preview-annotation handwritten" data-i18n="previewAnnotation">go on, try a little daydream →</p><div class="development-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="development">Stillhet is growing. The app is in development.</span></div></div>
   <div class="preview-paper reveal">
-    <div class="paper-top"><span class="eyebrow" data-i18n="paperLabel">A PAGE FROM OUR SKETCHBOOK</span><span class="paper-star" aria-hidden="true">✳</span></div>
+    <div class="paper-top"><span class="eyebrow" data-i18n="paperLabel">A PAGE FROM OUR SKETCHBOOK</span><svg class="paper-leaf" aria-hidden="true" focusable="false"><use href="#icon-leaf"/></svg></div>
     <div id="escape-form">
       <h3 data-i18n="formTitle">A little more…</h3>
       <fieldset class="nature-options"><legend class="sr-only" data-i18n="natureLegend">Choose the kind of nature you need</legend>
@@ -107,7 +136,7 @@
       <button id="find-escape" class="button button-primary preview-submit" type="button"><span data-i18n="previewCta">Picture my little escape</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
     </div>
     <div id="escape-result" hidden tabindex="-1">
-      <img id="result-image" src="images/forest-v3.jpg" alt="" width="2172" height="724" loading="lazy">
+      <img id="result-image" src="images/birch-heath-v1.jpg" alt="" width="2172" height="724" loading="lazy">
       <h3 id="result-title">A quiet woodland.</h3>
       <p id="result-description"></p>
       <p class="result-distance" id="result-distance"></p>
