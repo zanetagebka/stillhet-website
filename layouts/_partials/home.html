@@ -1,0 +1,127 @@
+<section class="hero" aria-labelledby="welcome-title" aria-roledescription="carousel" data-i18n-roledescription="carouselDescription">
+  <div class="hero-copy wrap" id="hero-copy">
+    <p class="eyebrow"><span class="tiny-sun" aria-hidden="true">✳</span><span data-i18n="heroEyebrow">LESS SCROLLING. MORE WANDERING.</span></p>
+    <h1 id="welcome-title"><span id="welcome-first">Too much AI?</span><span class="title-second"><span id="welcome-second">Try a little</span> <em id="welcome-accent">forest.</em></span></h1>
+    <p class="hero-description" id="welcome-description">When the world gets a little too loud, find a quiet place nearby. A little less screen. A little more green.</p>
+    <div class="hero-cta-row"><a class="button button-primary" href="#a-little-preview"><span data-i18n="heroCta">Find your quiet</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></a><span class="handwritten cta-note" data-i18n="heroCtaNote">a small step outside</span></div>
+  </div>
+  <div class="hero-landscape" id="hero-landscape">
+    <img id="welcome-image" class="landscape-image" src="images/forest-v3.jpg" width="2172" height="724" alt="Light pencil outlines of a few pine trees, an empty winding path and a distant hill." fetchpriority="high" decoding="async">
+    <canvas id="landscape-motion" class="landscape-motion" aria-hidden="true" hidden></canvas>
+    <svg id="meadow-life" class="meadow-life" viewBox="0 0 2172 724" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="meadow-butterfly">
+          <g class="butterfly-wings">
+            <path d="M0 0C-4-10-12-10-10-3c1 4 5 6 10 6C-7 9-9 4-6 1M0 0C4-10 12-10 10-3c-1 4-5 6-10 6C7 9 9 4 6 1"/>
+          </g>
+          <path class="butterfly-body" d="M0-3v8M0-3l-2-3m2 3 2-3"/>
+        </g>
+      </defs>
+      <g transform="translate(390 563)"><g class="butterfly butterfly-one"><use href="#meadow-butterfly"/></g></g>
+      <g transform="translate(760 520)"><g class="butterfly butterfly-two"><use href="#meadow-butterfly"/></g></g>
+      <g id="meadow-perch" transform="translate(631 370)">
+        <g class="perching-bird">
+          <svg class="bird-perched" x="-13.3" y="-30.8" width="36" height="36" viewBox="0 0 362 362" overflow="hidden">
+            <image href="images/meadow-bird-v1.png" width="1086" height="362"/>
+          </svg>
+          <g class="bird-flying">
+            <svg class="bird-upstroke" x="-13.3" y="-30.8" width="36" height="36" viewBox="362 0 362 362" overflow="hidden">
+              <image href="images/meadow-bird-v1.png" width="1086" height="362"/>
+            </svg>
+            <svg class="bird-downstroke" x="-13.3" y="-30.8" width="36" height="36" viewBox="724 0 362 362" overflow="hidden">
+              <image href="images/meadow-bird-v1.png" width="1086" height="362"/>
+            </svg>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <svg id="hills-life" class="hills-life" viewBox="0 0 2172 724" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      <ellipse class="grass-insect grass-insect-one" rx="2.8" ry="2.1"/>
+      <ellipse class="grass-insect grass-insect-two" rx="2.4" ry="1.9"/>
+      <ellipse class="grass-insect grass-insect-three" rx="2.6" ry="2"/>
+    </svg>
+    <div class="sky-life" aria-hidden="true">
+      <svg class="bird bird-one" viewBox="0 0 50 20"><path d="M2 13q10-11 23 0Q38 2 48 12"/><path d="M4 14q8-10 20-1" opacity=".35"/></svg>
+      <svg class="bird bird-two" viewBox="0 0 50 20"><path d="M2 13q10-11 23 0Q38 2 48 12"/></svg>
+      <svg class="bird bird-three" viewBox="0 0 50 20"><path d="M2 13q10-11 23 0Q38 2 48 12"/></svg>
+      <svg class="cloud cloud-one" viewBox="0 0 180 45"><path d="M5 35c6-12 15-12 23-9C31 8 48 4 59 19 69-5 97 0 99 21c14-12 30-5 32 7 13-4 25-1 31 7M13 39l146-1"/><path d="M33 30c5-16 15-14 21-10m52 9c8-8 15-5 18 0" opacity=".35"/></svg>
+    </div>
+  </div>
+  <div class="hero-bottom wrap">
+    <div class="scene-controls" role="group" aria-label="Choose a welcome scene" data-i18n-aria="sceneControls">
+      <button class="scene-dot is-active" type="button" data-scene="0" aria-label="Forest welcome" aria-pressed="true"><span>01</span></button>
+      <button class="scene-dot" type="button" data-scene="1" aria-label="Lake welcome" aria-pressed="false"><span>02</span></button>
+      <button class="scene-dot" type="button" data-scene="2" aria-label="Meadow welcome" aria-pressed="false"><span>03</span></button>
+      <button class="scene-dot" type="button" data-scene="3" aria-label="Hills welcome" aria-pressed="false"><span>04</span></button>
+      <span class="control-divider" aria-hidden="true"></span>
+      <button id="next-scene" class="next-scene" type="button" aria-label="Next welcome scene" data-i18n-aria="nextScene"><svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+      <button id="motion-toggle" class="motion-toggle" type="button" aria-label="Pause animations" aria-pressed="false">Ⅱ</button>
+    </div>
+    <a class="scroll-cue" href="#the-idea"><span data-i18n="scroll">A little further down</span><span aria-hidden="true">↓</span></a>
+  </div>
+  <p id="scene-announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+</section>
+
+<section class="intro wrap section-space" id="the-idea" aria-labelledby="idea-title">
+  <div class="intro-margin"><svg class="sketch-icon sprig-icon" aria-hidden="true"><use href="#icon-leaf"/></svg><span class="handwritten" data-i18n="marginNote">a gentler kind<br>of getting away</span></div>
+  <div class="intro-main reveal">
+    <p class="eyebrow" data-i18n="ideaEyebrow">HELLO, WE’RE STILLHET.</p>
+    <h2 id="idea-title" data-i18n="ideaTitle">The world has enough noise.<br>Let’s find you a little quiet.</h2>
+    <p class="body-copy" data-i18n="ideaBody">Some days, you don’t need another recommendation, another list, or another thing to keep up with. You just need somewhere to go.</p>
+    <p class="body-copy" data-i18n="ideaBody2">We’re making a small app to help you find peaceful places in nature, close to home. One thoughtful suggestion, so you can stop searching and start being there.</p>
+    <p class="intro-signature"><span class="handwritten" data-i18n="meaning">stillhet / Norwegian for quiet, stillness</span><svg viewBox="0 0 95 25" aria-hidden="true"><path d="M3 17c22-14 51-12 84-9m-8-6 10 6-11 9"/></svg></p>
+  </div>
+</section>
+
+<section class="how-section section-space" id="how-it-works" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-heading reveal"><p class="eyebrow" data-i18n="howEyebrow">A LITTLE LESS EFFORT.</p><h2 id="how-title" data-i18n="howTitle">Outside, in three small steps.</h2><p class="body-copy" data-i18n="howIntro">Less time making a plan. More time making no plans at all.</p></div>
+    <div class="steps">
+      <article class="step reveal"><span class="step-number">01</span><svg class="step-icon" aria-hidden="true"><use href="#icon-leaf"/></svg><h3 data-i18n="step1Title">What feels like you today?</h3><p data-i18n="step1Body">A forest, a little water, an open sky. Choose what you’re drawn to and how far you feel like going.</p><span class="step-footnote handwritten" data-i18n="step1Note">no wrong answers</span></article>
+      <svg class="step-connector connector-one" viewBox="0 0 150 45" aria-hidden="true"><path d="M3 32C32 0 75 0 139 25m-11-12 13 12-17 3"/></svg>
+      <article class="step reveal"><span class="step-number">02</span><svg class="step-icon" aria-hidden="true"><use href="#icon-compass"/></svg><h3 data-i18n="step2Title">A quiet place, picked for you.</h3><p data-i18n="step2Body">One considered suggestion, with the little things you need to know. A place to explore, rather than a pin to crowd around.</p><span class="step-footnote handwritten" data-i18n="step2Note">less choosing, more going</span></article>
+      <svg class="step-connector connector-two" viewBox="0 0 150 45" aria-hidden="true"><path d="M3 15c35 28 77 31 137 1m-17-4 19 3-9 14"/></svg>
+      <article class="step reveal"><span class="step-number">03</span><svg class="step-icon" aria-hidden="true"><use href="#icon-phone"/></svg><h3 data-i18n="step3Title">Put your phone away.</h3><p data-i18n="step3Body">You’ve got your little escape. Go slowly, look around, and leave the place just as peaceful as you found it.</p><span class="step-footnote handwritten" data-i18n="step3Note">we’ll be here when you’re back</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="preview-section wrap section-space" id="a-little-preview" aria-labelledby="preview-title">
+  <div class="preview-copy reveal"><p class="eyebrow" data-i18n="previewEyebrow">A SMALL GLIMPSE OF WHAT’S COMING.</p><h2 id="preview-title" data-i18n="previewTitle">Where does your<br>mind wander?</h2><p class="body-copy" data-i18n="previewBody">You don’t need to know the name of a place. Just how you’d like to feel when you get there.</p><p class="preview-annotation handwritten" data-i18n="previewAnnotation">go on, try a little daydream →</p><div class="development-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="development">Stillhet is growing. The app is in development.</span></div></div>
+  <div class="preview-paper reveal">
+    <div class="paper-top"><span class="eyebrow" data-i18n="paperLabel">A PAGE FROM OUR SKETCHBOOK</span><span class="paper-star" aria-hidden="true">✳</span></div>
+    <div id="escape-form">
+      <h3 data-i18n="formTitle">A little more…</h3>
+      <fieldset class="nature-options"><legend class="sr-only" data-i18n="natureLegend">Choose the kind of nature you need</legend>
+        <label class="nature-option"><input type="radio" name="nature" value="forest" checked><span><svg aria-hidden="true"><use href="#icon-tree"/></svg><span data-i18n="forest">Forest</span></span></label>
+        <label class="nature-option"><input type="radio" name="nature" value="lake"><span><svg aria-hidden="true"><use href="#icon-water"/></svg><span data-i18n="lake">Water</span></span></label>
+        <label class="nature-option"><input type="radio" name="nature" value="meadow"><span><svg aria-hidden="true"><use href="#icon-flower"/></svg><span data-i18n="meadow">Meadows</span></span></label>
+        <label class="nature-option"><input type="radio" name="nature" value="hills"><span><svg aria-hidden="true"><use href="#icon-hills"/></svg><span data-i18n="hills">Hills</span></span></label>
+      </fieldset>
+      <fieldset class="time-options"><legend data-i18n="timeLegend">And a little time to get there.</legend><div class="time-pills">
+        <label><input type="radio" name="travel" value="15"><span>15 <span data-i18n="minutes">min</span></span></label>
+        <label><input type="radio" name="travel" value="30" checked><span>30 <span data-i18n="minutes">min</span></span></label>
+        <label><input type="radio" name="travel" value="45"><span>45 <span data-i18n="minutes">min</span></span></label>
+        <label><input type="radio" name="travel" value="60"><span>60 <span data-i18n="minutes">min</span></span></label>
+      </div></fieldset>
+      <button id="find-escape" class="button button-primary preview-submit" type="button"><span data-i18n="previewCta">Picture my little escape</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+    </div>
+    <div id="escape-result" hidden tabindex="-1">
+      <img id="result-image" src="images/forest-v3.jpg" alt="" width="2172" height="724" loading="lazy">
+      <h3 id="result-title">A quiet woodland.</h3>
+      <p id="result-description"></p>
+      <p class="result-distance" id="result-distance"></p>
+      <button id="try-again" class="text-button" type="button"><span data-i18n="tryAgain">Let your mind wander somewhere else</span><span aria-hidden="true">↶</span></button>
+    </div>
+    <p class="preview-disclaimer" data-i18n="previewDisclaimer">An illustrated preview, not a real place recommendation.</p>
+    <noscript><p class="preview-disclaimer">Enable JavaScript to try this illustrated preview and switch welcome scenes.</p></noscript>
+  </div>
+</section>
+
+<section class="promise-section section-space" id="our-promise" aria-labelledby="promise-title">
+  <div class="promise-inner wrap reveal"><svg class="promise-leaf sketch-icon" aria-hidden="true"><use href="#icon-leaf"/></svg><p class="eyebrow" data-i18n="promiseEyebrow">QUIET PLACES SHOULD STAY THAT WAY.</p><h2 id="promise-title" data-i18n="promiseTitle">A little care.<br>For you. And for the place.</h2><p class="body-copy" data-i18n="promiseBody">Finding a peaceful place shouldn’t take its peace away. We’re building Stillhet around that simple thought.</p><ul class="promise-list"><li><svg aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="promise1">Areas to explore, not secret spots to expose.</span></li><li><svg aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="promise2">Thoughtful suggestions that help spread the footsteps.</span></li><li><svg aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="promise3">No social feed. No public visit history. Room for privacy.</span></li></ul><p class="promise-signature handwritten" data-i18n="promiseNote">take a breath. leave only light footsteps.</p></div>
+</section>
+
+<section class="closing wrap section-space reveal" aria-labelledby="closing-title"><svg class="closing-tree sketch-icon" aria-hidden="true"><use href="#icon-tree"/></svg><p class="eyebrow" data-i18n="closingEyebrow">SOMETHING QUIET IS TAKING ROOT.</p><h2 id="closing-title" data-i18n="closingTitle">A little less online.<br>A little more alive.</h2><p class="body-copy" data-i18n="closingBody">Stillhet is still a seedling. Until it’s ready, there’s probably a patch of sky, a tree, or a quiet path waiting just outside.</p><button class="button button-outline" id="breathe-button" type="button"><span data-i18n="breatheCta">Take a breath with us</span><svg aria-hidden="true"><use href="#icon-leaf"/></svg></button><p class="handwritten closing-note" data-i18n="closingNote">you don’t need an app for that.</p></section>
+
+<dialog id="breathing-dialog" class="breathing-dialog" aria-labelledby="breathing-title"><button class="dialog-close" id="close-breathing" type="button" aria-label="Close breathing pause" data-i18n-aria="closeBreathing">×</button><p class="eyebrow" data-i18n="breathingEyebrow">JUST THIS MOMENT.</p><h2 id="breathing-title" data-i18n="breathingTitle">Nowhere else to be.</h2><div class="breathing-orbit" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 7C27 6 8 25 7 49S27 94 51 93 94 73 93 49 74 7 50 7Z"/><path d="M50 10C30 8 11 29 10 50s19 41 41 40 40-18 40-40S72 10 50 10Z"/></svg><svg class="breathing-leaf"><use href="#icon-leaf"/></svg></div><p class="handwritten breathing-instruction" id="breathing-instruction" aria-live="off">Breathe in…</p><p class="breathing-caption" data-i18n="breathingCaption">A gentle pause. Follow the circle, at your own pace.</p></dialog>

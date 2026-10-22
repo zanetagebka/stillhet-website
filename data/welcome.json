@@ -1,0 +1,74 @@
+[
+  {
+    "id": "forest",
+    "image": "images/forest-v3.jpg",
+    "en": {
+      "first": "Too much AI?",
+      "second": "Try a little",
+      "accent": "forest.",
+      "description": "When the world gets a little too loud, find a quiet place nearby. A little less screen. A little more green.",
+      "alt": "Light pencil outlines of a few pine trees, an empty winding path and a distant hill."
+    },
+    "pl": {
+      "first": "Za dużo AI?",
+      "second": "Czas na trochę",
+      "accent": "lasu.",
+      "description": "Kiedy świat robi się zbyt głośny, znajdź spokojne miejsce blisko siebie. Trochę mniej ekranu. Trochę więcej zieleni.",
+      "alt": "Delikatny szkic kilku sosen, pustej krętej ścieżki i odległego wzgórza."
+    }
+  },
+  {
+    "id": "lake",
+    "image": "images/lake-v2.jpg",
+    "en": {
+      "first": "A little closer.",
+      "second": "A little more",
+      "accent": "offline.",
+      "description": "Find a place nearby where you can disconnect for a while. Just you, still water, and nowhere else to be.",
+      "alt": "Sparse pencil outlines of a wooden jetty, a bench and a few trees around a still lake."
+    },
+    "pl": {
+      "first": "Gdzieś niedaleko.",
+      "second": "Trochę bardziej",
+      "accent": "offline.",
+      "description": "Znajdź miejsce w pobliżu, gdzie możesz na chwilę się odłączyć. Tylko Ty, spokojna woda i czas dla siebie.",
+      "alt": "Oszczędny szkic pomostu, ławki i kilku drzew nad spokojnym jeziorem."
+    }
+  },
+  {
+    "id": "meadow",
+    "image": "images/meadow-v4.jpg",
+    "en": {
+      "first": "Nothing to catch up on.",
+      "second": "Just a little",
+      "accent": "fresh air.",
+      "description": "Trade a few open tabs for an open sky. There might be a small, quiet escape closer than you think.",
+      "alt": "Delicate pencil sketch of an oak, wildflowers and a country lane through a flat open meadow."
+    },
+    "pl": {
+      "first": "Nic do nadrobienia.",
+      "second": "Tylko trochę",
+      "accent": "powietrza.",
+      "description": "Zamień otwarte karty na otwarte niebo. Mała, spokojna ucieczka może być bliżej, niż myślisz.",
+      "alt": "Delikatny szkic dębu, polnych kwiatów i wiejskiej drogi przez otwartą płaską łąkę."
+    }
+  },
+  {
+    "id": "hills",
+    "image": "images/poloniny-v1.jpg",
+    "en": {
+      "first": "Your to-do list can wait.",
+      "second": "Take the",
+      "accent": "quiet way.",
+      "description": "Open grasslands. A softer horizon. Find a little room to breathe, without spending your afternoon searching.",
+      "alt": "Delicate pencil sketch of open mountain grasslands inspired by the Bieszczady poloniny, with rounded ridges and sparse tufts of grass. No paths or people."
+    },
+    "pl": {
+      "first": "Lista zadań poczeka.",
+      "second": "Wybierz drogę",
+      "accent": "do ciszy.",
+      "description": "Otwarte połoniny. Łagodny horyzont. Znajdź trochę przestrzeni na oddech, bez godzin szukania.",
+      "alt": "Delikatny szkic otwartych połonin inspirowanych Bieszczadami: łagodne grzbiety i pojedyncze kępy traw, bez ścieżek i ludzi."
+    }
+  }
+]

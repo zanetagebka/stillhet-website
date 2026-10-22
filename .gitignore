@@ -1,0 +1,25 @@
+# Publish only the current website source and deployment configuration.
+/*
+!/.gitignore
+!/hugo.toml
+!/assets/
+!/content/
+!/data/
+!/layouts/
+!/static/
+!/.github/
+
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/pages.yml
+
+/static/images/*
+!/static/images/favicon.svg
+!/static/images/forest-v3.jpg
+!/static/images/lake-v2.jpg
+!/static/images/meadow-v4.jpg
+!/static/images/poloniny-v1.jpg
+!/static/images/meadow-bird-v1.png
+
+.DS_Store

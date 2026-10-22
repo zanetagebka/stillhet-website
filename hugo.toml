@@ -1,0 +1,12 @@
+baseURL = 'https://zanetagebka.github.io/stillhet-website/'
+languageCode = 'en'
+title = 'Stillhet — a little closer to quiet'
+disableKinds = ['taxonomy', 'term', 'RSS']
+enableRobotsTXT = true
+
+[params]
+description = 'A small invitation to step outside. Stillhet is a mobile app in the making, helping you find quiet places in nature while protecting what makes them quiet.'
+
+[build]
+  [build.buildStats]
+  enable = false

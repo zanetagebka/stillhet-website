@@ -1,0 +1,59 @@
+name: Publish website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v7
+
+      - name: Install Hugo
+        env:
+          HUGO_VERSION: 0.168.0
+          HUGO_SHA256: fada83ad56bb27ed4cb7dd81590303bdac16140f944ac4e66fc248117e2d5594
+        run: |
+          archive="${RUNNER_TEMP}/hugo.tar.gz"
+          curl --fail --silent --show-error --location \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz" \
+            --output "${archive}"
+          echo "${HUGO_SHA256}  ${archive}" | sha256sum --check
+          mkdir -p "${RUNNER_TEMP}/hugo-bin"
+          tar -xzf "${archive}" -C "${RUNNER_TEMP}/hugo-bin" hugo
+          echo "${RUNNER_TEMP}/hugo-bin" >> "${GITHUB_PATH}"
+
+      - name: Build website
+        run: hugo --gc --minify
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v5
