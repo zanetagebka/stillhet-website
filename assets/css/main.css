@@ -252,7 +252,6 @@ h1 em::after { content: ''; position: absolute; bottom: -7px; left: -3px; width:
 .step-icon { width: 68px; height: 68px; stroke-width: 1.15; margin-bottom: 23px; color: #677458; }
 .step h3 { font-size: 22px; margin-bottom: 15px; }
 .step p { font-size: 12px; line-height: 1.9; color: var(--muted); max-width: 270px; margin-inline: auto; }
-.step-footnote { display: inline-block; color: #7c8669; font-size: 17px; margin-top: 19px; transform: rotate(-4deg); }
 .step-connector { position: absolute; width: 120px; height: 45px; top: 18px; color: #9ba48b; stroke-width: 1; stroke-dasharray: 3 6; }
 .connector-one { left: 27%; }
 .connector-two { left: 62%; }
@@ -417,7 +416,6 @@ html.motion-paused { scroll-behavior: auto; }
   .step p { font-size: 13px; max-width: 290px; }
   .step-icon { margin-bottom: 15px; }
   .step-connector { display: none; }
-  .step-footnote { margin-top: 14px; }
   .preview-section { grid-template-columns: 1fr; gap: 45px; padding-inline: 10px; }
   .preview-copy { text-align: center; }
   .preview-copy h2 { font-size: 40px; }
