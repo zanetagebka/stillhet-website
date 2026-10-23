@@ -5,7 +5,7 @@ disableKinds = ['taxonomy', 'term', 'RSS']
 enableRobotsTXT = true
 
 [params]
-description = 'A small invitation to step outside. Stillhet is a mobile app in the making, helping you find quiet places in nature while protecting what makes them quiet.'
+description = 'Stillhet is a mobile app in development to help you find peaceful places in nature nearby. Choose nature and distance in kilometres for one considered area to explore.'
 
 [build]
   [build.buildStats]

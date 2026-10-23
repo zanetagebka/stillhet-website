@@ -6,53 +6,87 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const copy = {
     en: {
-      skip: 'Skip to content', navLabel: 'Main navigation', navIdea: 'The idea', navHow: 'How it works', navPromise: 'Our promise', navCta: 'A little escape',
-      heroEyebrow: 'LESS SCROLLING. MORE WANDERING.', heroCta: 'Find your quiet', heroCtaNote: 'a small step outside', scroll: 'A little further down',
+      skip: 'Skip to content', navLabel: 'Main navigation', navIdea: 'The app', navHow: 'How it works', navStory: 'The story', navCta: 'See the idea',
+      heroEyebrow: 'LESS SCROLLING. MORE WANDERING.', heroCta: 'Explore the app idea', heroCtaNote: 'an illustrated preview', scroll: 'A little further down',
+      heroDescription: 'Stillhet is a mobile app in development to help you find peaceful places in nature nearby. Choose the nature you like and your maximum distance in kilometres. Get one suggested area for a walk or a quiet break.',
       carouselDescription: 'carousel', sceneControls: 'Choose a welcome scene', nextScene: 'Next welcome scene', sceneNames: ['Forest welcome', 'Lake welcome', 'Meadow welcome', 'Hills welcome', 'Valley welcome'],
-      marginNote: 'a gentler kind\nof getting away', ideaEyebrow: 'HELLO, WE’RE STILLHET.', ideaTitle: 'The world has enough noise.\nLet’s find you a little quiet.',
-      ideaBody: 'Some days, you don’t need another recommendation, another list, or another thing to keep up with. You just need somewhere to go.',
-      ideaBody2: 'We’re making a small app to help you find peaceful places in nature, close to home. One thoughtful suggestion, so you can stop searching and start being there.', meaning: 'stillhet / Norwegian for quiet, stillness',
-      howEyebrow: 'A LITTLE LESS EFFORT.', howTitle: 'Outside, in three small steps.', howIntro: 'Less time making a plan. More time making no plans at all.',
-      step1Title: 'What feels like you today?', step1Body: 'A forest, a little water, an open sky. Choose what you’re drawn to and how far you feel like going.', step1Note: 'no wrong answers',
-      step2Title: 'A quiet place, picked for you.', step2Body: 'One considered suggestion, with the little things you need to know. A place to explore, rather than a pin to crowd around.', step2Note: 'less choosing, more going',
+      marginNote: 'a gentler kind\nof getting away', ideaEyebrow: 'WHAT IS STILLHET?', ideaTitle: 'Work is done.\nWhere can you go to unwind?',
+      ideaBody: 'You’ve spent the day at a screen. You’d like a quiet walk in the woods or a little time by the water, but you don’t know where to go — and don’t feel like researching it.',
+      ideaBody2: 'That’s the moment Stillhet is being built for. Tell it what kind of nature you want and how far from home you’re willing to go. The aim is one considered area to explore, with practical details to help you decide and head outside.', meaning: 'stillhet / Norwegian for quiet, stillness', storyLink: 'Why I started Stillhet',
+      howEyebrow: 'HOW THE APP IS MEANT TO WORK.', howTitle: 'Outside, in three small steps.', howIntro: 'For example: you want a forest walk, within 25 km of home after work.',
+      step1Title: 'Choose nature and distance.', step1Body: 'Forest, water, meadows or hills? You’ll choose what appeals to you and how far from home you want to go.', step1Note: 'what you need, close to home',
+      step2Title: 'Get one suggested area.', step2Body: 'Stillhet will suggest an area that fits, with the distance and practical details for your visit.', step2Note: 'less choosing, more going',
       step3Title: 'Put your phone away.', step3Body: 'You’ve got your little escape. Go slowly, look around, and leave the place just as peaceful as you found it.', step3Note: 'we’ll be here when you’re back',
-      previewEyebrow: 'A SMALL GLIMPSE OF WHAT’S COMING.', previewTitle: 'Where does your\nmind wander?', previewBody: 'You don’t need to know the name of a place. Just how you’d like to feel when you get there.', previewAnnotation: 'go on, try a little daydream →',
-      development: 'Stillhet is growing. The app is in development.', paperLabel: 'A PAGE FROM OUR SKETCHBOOK', formTitle: 'A little more…', natureLegend: 'Choose the kind of nature you need',
-      forest: 'Forest', lake: 'Water', meadow: 'Meadows', hills: 'Hills', timeLegend: 'And a little time to get there.', minutes: 'min', previewCta: 'Picture my little escape',
+      previewEyebrow: 'TRY AN ILLUSTRATED PREVIEW.', previewTitle: 'A little glimpse\nof the idea.', previewBody: 'Choose a kind of nature and a distance in kilometres to see the idea in action. This sketch shows an imagined landscape; the future app is intended to suggest real areas nearby.', previewAnnotation: 'start with what you feel like →',
+      development: 'Still in development. The app isn’t available to download yet.', paperLabel: 'A PAGE FROM OUR SKETCHBOOK', formTitle: 'Where would you like to unwind?', natureLegend: 'Choose the kind of nature you need',
+      forest: 'Forest', lake: 'Water', meadow: 'Meadows', hills: 'Hills', distanceLegend: 'How far from home?', previewCta: 'Show an example',
       previewDisclaimer: 'An illustrated preview, not a real place recommendation.', tryAgain: 'Let your mind wander somewhere else',
+      storyEyebrow: 'THE STORY BEHIND STILLHET.', storyTitle: 'It started with silence.\nFar from home.', storyQuestion: 'Could a little of that peace\nbe closer to home?',
+      memoryCaption: 'Fragments of memories from Sweden.', memoryKeyboardHint: 'Swedish memories. Use the arrow keys to change the illustration.', previousMemory: 'Previous memory', nextMemory: 'Next memory',
+      memoryCampsiteAlt: 'Pencil illustration of two tents below a rocky mountain wall with patches of snow in Swedish Lapland.',
+      memoryHutsAlt: 'Pencil illustration of small mountain huts, a stream and a crossed trail marker below distant snowy peaks.',
+      memoryValleyAlt: 'Pencil illustration of a lake beneath a broad flat-topped mountain and a lower slope across the valley.',
+      memoryPeaksAlt: 'Pencil illustration of pointed snowy peaks and a low ridge above rocky tundra, under a wide cloudy sky.',
+      memoryMistAlt: 'Pencil illustration of a rounded snow-dusted summit partly hidden by mist, with a long patch of snow on the slope.',
+      memoryPassAlt: 'Pencil illustration of snow-streaked slopes framing a rounded mountain summit beneath low clouds.',
+      memoryCabinAlt: 'Pencil illustration of a small wooden cabin partly hidden among mossy trunks, conifer branches and leafy twigs.',
+      memoryGatewayAlt: 'Portrait pencil illustration of the wooden Kungsleden gateway in Abisko, with a gravel path, birches and a mountain behind it.',
+      memoryWaterfallAlt: 'Portrait pencil illustration of a waterfall in a misty rocky gorge, with a small footbridge and a stream flowing towards the foreground.',
+      memoryAnnouncement: (index, total) => `Memory ${index + 1} of ${total}.`,
+      storyBody1: 'I spend my working days writing software. But in Swedish Lapland, walking Kungsleden from Abisko with a tent, a sleeping bag and food on my back, I found something I keep looking for: silence. No cities, no signal. Just open landscape, above the Arctic Circle.',
+      storyBody2: 'Coming home from Lapland, I wondered whether finding a little peace really needed a journey of thousands of kilometres. What about a place you could reach just after work?',
+      storyBody3: 'That question became Stillhet. I’m exploring a small app that could help us find those places closer to home. It’s still taking shape, one idea and one experiment at a time.', storySignature: 'the person behind Stillhet',
       promiseEyebrow: 'QUIET PLACES SHOULD STAY THAT WAY.', promiseTitle: 'A little care.\nFor you. And for the place.', promiseBody: 'Finding a peaceful place shouldn’t take its peace away. We’re building Stillhet around that simple thought.',
+      promisePlaces: 'The places we store will only be used to suggest areas to explore. Users will never be able to browse our database or search for individual spots in a list or directory.',
       promise1: 'Areas to explore, not secret spots to expose.', promise2: 'Thoughtful suggestions that help spread the footsteps.', promise3: 'No social feed. No public visit history. Room for privacy.', promiseNote: 'take a breath. leave only light footsteps.',
       closingEyebrow: 'SOMETHING QUIET IS TAKING ROOT.', closingTitle: 'A little less online.\nA little more alive.', closingBody: 'Stillhet is still a seedling. Until it’s ready, there’s probably a patch of sky, a tree, or a quiet path waiting just outside.',
-      breatheCta: 'Take a breath with us', closingNote: 'you don’t need an app for that.', footerLine: 'Made for a quieter kind of outside.', footerStatus: 'A little work in progress',
+      breatheCta: 'Take a breath with us', closingNote: 'you don’t need an app for that.', footerLine: 'Made for a quieter kind of outside.', footerStatus: 'A little work in progress', footerContact: 'Contact · LinkedIn', footerContactLabel: 'Contact Żaneta on LinkedIn',
       breathingEyebrow: 'JUST THIS MOMENT.', breathingTitle: 'Nowhere else to be.', breathingCaption: 'A gentle pause. Follow the circle, at your own pace.', closeBreathing: 'Close breathing pause', breatheIn: 'Breathe in…', breatheOut: 'Breathe out…', breatheOwnPace: 'Breathe at your own pace.', pauseMotion: 'Pause animations', resumeMotion: 'Resume animations',
       resultTitles: { forest: 'A quiet woodland.', lake: 'Some still water.', meadow: 'A little open sky.', hills: 'A softer horizon.' },
       resultBodies: { forest: 'Imagine the scent of pine, a little shade, and a path with no hurry in it. A place to listen to something other than your phone.', lake: 'Imagine a quiet bank, reeds moving in the breeze, and water with absolutely nothing to tell you. Sit a while.', meadow: 'Imagine a small path through long grass, a few wildflowers, and room for your thoughts to wander. Nothing to tick off.', hills: 'Imagine open mountain grasslands, a soft breeze in the long grass, and gentle ridges stretching into the distance. Room to breathe.' },
-      resultDistance: minutes => `Your daydream: within ${minutes} minutes of home.`,
+      resultDistance: kilometres => `Your daydream: within ${kilometres} km of home.`,
       announcement: (index, title) => `Welcome ${index + 1} of ${scenes.length}. ${title}`
     },
     pl: {
-      skip: 'Przejdź do treści', navLabel: 'Nawigacja główna', navIdea: 'Pomysł', navHow: 'Jak to działa', navPromise: 'Nasza obietnica', navCta: 'Mała ucieczka',
-      heroEyebrow: 'MNIEJ PRZEWIJANIA. WIĘCEJ WĘDROWANIA.', heroCta: 'Znajdź swój spokój', heroCtaNote: 'mały krok na zewnątrz', scroll: 'Jeszcze kawałek dalej',
+      skip: 'Przejdź do treści', navLabel: 'Nawigacja główna', navIdea: 'Aplikacja', navHow: 'Jak to działa', navStory: 'Historia', navCta: 'Zobacz pomysł',
+      heroEyebrow: 'MNIEJ PRZEWIJANIA. WIĘCEJ WĘDROWANIA.', heroCta: 'Poznaj pomysł na aplikację', heroCtaNote: 'ilustrowany podgląd', scroll: 'Jeszcze kawałek dalej',
+      heroDescription: 'Stillhet to powstająca aplikacja mobilna, która pomoże Ci znaleźć spokojne miejsca w naturze, blisko domu. Wybierz rodzaj natury i maksymalną odległość w kilometrach. Otrzymaj jedną propozycję obszaru na spacer lub chwilę odpoczynku.',
       carouselDescription: 'karuzela', sceneControls: 'Wybierz ekran powitalny', nextScene: 'Następny ekran powitalny', sceneNames: ['Powitanie w lesie', 'Powitanie nad wodą', 'Powitanie na łące', 'Powitanie na wzgórzach', 'Powitanie w dolinie'],
-      marginNote: 'łagodniejszy sposób\nna małą ucieczkę', ideaEyebrow: 'CZEŚĆ, JESTEŚMY STILLHET.', ideaTitle: 'Świat ma już dość hałasu.\nZnajdźmy Ci trochę ciszy.',
-      ideaBody: 'Są dni, kiedy nie potrzebujesz kolejnej rekomendacji, kolejnej listy ani kolejnej rzeczy do nadrobienia. Potrzebujesz tylko miejsca, do którego możesz pójść.',
-      ideaBody2: 'Tworzymy małą aplikację, która pomoże Ci znajdować spokojne miejsca w naturze, blisko domu. Jedna przemyślana propozycja, żeby przestać szukać i po prostu tam być.', meaning: 'stillhet / po norwesku: cisza, wyciszenie',
-      howEyebrow: 'TROCHĘ MNIEJ WYSIŁKU.', howTitle: 'Na zewnątrz, w trzech małych krokach.', howIntro: 'Mniej czasu na planowanie. Więcej czasu bez planów.',
-      step1Title: 'Czego Ci dzisiaj potrzeba?', step1Body: 'Lasu, trochę wody, otwartego nieba. Wybierz to, do czego Cię ciągnie, i czas na dojazd.', step1Note: 'tu nie ma złych odpowiedzi',
-      step2Title: 'Spokojne miejsce dla Ciebie.', step2Body: 'Jedna przemyślana propozycja i kilka potrzebnych wskazówek. Obszar do odkrycia, zamiast punktu, przy którym zbiera się tłum.', step2Note: 'mniej wybierania, więcej bycia',
+      marginNote: 'łagodniejszy sposób\nna małą ucieczkę', ideaEyebrow: 'CZYM JEST STILLHET?', ideaTitle: 'Koniec pracy.\nDokąd pojechać, żeby odpocząć?',
+      ideaBody: 'Cały dzień przed ekranem. Masz ochotę na spokojny spacer po lesie albo chwilę nad wodą, ale nie wiesz, dokąd pojechać — i nie masz już siły szukać.',
+      ideaBody2: 'Właśnie z myślą o takiej chwili powstaje Stillhet. Wybierzesz rodzaj natury i odległość od domu. Celem jest jedna przemyślana propozycja obszaru, z praktycznymi informacjami, które pomogą Ci podjąć decyzję i wyjść z domu.', meaning: 'stillhet / po norwesku: cisza, wyciszenie', storyLink: 'Dlaczego zaczęłam tworzyć Stillhet',
+      howEyebrow: 'TAK MA DZIAŁAĆ APLIKACJA.', howTitle: 'Na zewnątrz, w trzech małych krokach.', howIntro: 'Na przykład: po pracy chcesz pójść do lasu, najwyżej 25 km od domu.',
+      step1Title: 'Wybierz naturę i odległość.', step1Body: 'Las, woda, łąki czy wzgórza? Wybierzesz to, na co masz ochotę, i jak daleko od domu chcesz się wybrać.', step1Note: 'to, czego potrzebujesz, blisko domu',
+      step2Title: 'Otrzymaj propozycję obszaru.', step2Body: 'Stillhet zaproponuje pasujący obszar, poda odległość i praktyczne informacje przydatne podczas wizyty.', step2Note: 'mniej wybierania, więcej bycia',
       step3Title: 'Odłóż telefon.', step3Body: 'Spokojne miejsce już czeka. Zwolnij, rozejrzyj się i zadbaj, by zachowało swój spokój.', step3Note: 'będziemy tu, kiedy wrócisz',
-      previewEyebrow: 'MAŁY SZKIC TEGO, CO NADCHODZI.', previewTitle: 'Dokąd wędrują\nTwoje myśli?', previewBody: 'Nie musisz znać nazwy miejsca. Wystarczy wiedzieć, jak chcesz się tam poczuć.', previewAnnotation: 'spróbuj przez chwilę pomarzyć →',
-      development: 'Stillhet rośnie. Aplikacja jest w trakcie tworzenia.', paperLabel: 'KARTKA Z NASZEGO SZKICOWNIKA', formTitle: 'Trochę więcej…', natureLegend: 'Wybierz rodzaj natury, którego potrzebujesz',
-      forest: 'Lasu', lake: 'Wody', meadow: 'Łąki', hills: 'Wzgórz', timeLegend: 'I trochę czasu na dojazd.', minutes: 'min', previewCta: 'Wyobraź sobie małą ucieczkę',
+      previewEyebrow: 'WYPRÓBUJ ILUSTROWANY PODGLĄD.', previewTitle: 'Mały podgląd\npomysłu.', previewBody: 'Wybierz rodzaj natury i odległość w kilometrach, żeby zobaczyć, na czym polega pomysł. Ten szkic pokazuje wyobrażony krajobraz; przyszła aplikacja ma proponować prawdziwe obszary w pobliżu.', previewAnnotation: 'zacznij od tego, na co masz ochotę →',
+      development: 'Aplikacja wciąż powstaje. Nie jest jeszcze dostępna do pobrania.', paperLabel: 'KARTKA Z NASZEGO SZKICOWNIKA', formTitle: 'Gdzie chcesz odpocząć?', natureLegend: 'Wybierz rodzaj natury, którego potrzebujesz',
+      forest: 'Las', lake: 'Woda', meadow: 'Łąki', hills: 'Wzgórza', distanceLegend: 'Jak daleko od domu?', previewCta: 'Pokaż przykład',
       previewDisclaimer: 'Ilustrowany podgląd, a nie rekomendacja prawdziwego miejsca.', tryAgain: 'Pozwól myślom powędrować gdzie indziej',
+      storyEyebrow: 'SKĄD WZIĘŁO SIĘ STILLHET.', storyTitle: 'Zaczęło się od ciszy.\nDaleko od domu.', storyQuestion: 'Czy trochę tego spokoju\nmożna znaleźć bliżej domu?',
+      memoryCaption: 'Urywki wspomnień ze Szwecji.', memoryKeyboardHint: 'Wspomnienia ze Szwecji. Użyj klawiszy strzałek, aby zmienić ilustrację.', previousMemory: 'Poprzednie wspomnienie', nextMemory: 'Następne wspomnienie',
+      memoryCampsiteAlt: 'Ołówkowa ilustracja dwóch namiotów pod skalistą ścianą górską z płatami śniegu w szwedzkiej Laponii.',
+      memoryHutsAlt: 'Ołówkowa ilustracja małych górskich chat, strumienia i znacznika szlaku w kształcie krzyża na tle odległych ośnieżonych szczytów.',
+      memoryValleyAlt: 'Ołówkowa ilustracja jeziora pod szeroką górą o płaskim wierzchołku i niższym zboczem po drugiej stronie doliny.',
+      memoryPeaksAlt: 'Ołówkowa ilustracja spiczastych ośnieżonych szczytów i niskiego grzbietu nad kamienistą tundrą, pod rozległym pochmurnym niebem.',
+      memoryMistAlt: 'Ołówkowa ilustracja zaokrąglonego, przyprószonego śniegiem szczytu częściowo ukrytego we mgle, z długim płatem śniegu na zboczu.',
+      memoryPassAlt: 'Ołówkowa ilustracja zboczy z płatami śniegu otaczających zaokrąglony szczyt pod niskimi chmurami.',
+      memoryCabinAlt: 'Ołówkowa ilustracja małej drewnianej chaty częściowo ukrytej wśród omszałych pni, iglastych gałęzi i liściastych gałązek.',
+      memoryGatewayAlt: 'Pionowa ilustracja ołówkowa drewnianej bramy szlaku Kungsleden w Abisko, ze żwirową ścieżką, brzozami i górą w tle.',
+      memoryWaterfallAlt: 'Pionowa ilustracja ołówkowa wodospadu w zamglonym skalistym wąwozie, z małym mostkiem i strumieniem płynącym ku pierwszemu planowi.',
+      memoryAnnouncement: (index, total) => `Wspomnienie ${index + 1} z ${total}.`,
+      storyBody1: 'Na co dzień piszę oprogramowanie. Ale w szwedzkiej Laponii, wędrując szlakiem Kungsleden z Abisko, z namiotem, śpiworem i jedzeniem w plecaku, znalazłam coś, czego wciąż szukam: ciszę. Bez miast, bez zasięgu. Tylko otwarta przestrzeń, za kołem podbiegunowym.',
+      storyBody2: 'Po powrocie z Laponii zaczęłam się zastanawiać, czy znalezienie chwili wytchnienia naprawdę wymaga podróży tysiące kilometrów od domu. A gdyby było takie miejsce, do którego można pojechać po prostu po pracy?',
+      storyBody3: 'Z tego pytania narodziło się Stillhet. Pracuję nad pomysłem na małą aplikację, która mogłaby pomóc nam znaleźć takie miejsca bliżej domu. Wciąż nabiera kształtu, z każdym pomysłem i eksperymentem.', storySignature: 'osoba, od której zaczęło się Stillhet',
       promiseEyebrow: 'SPOKOJNE MIEJSCA POWINNY TAKIE POZOSTAĆ.', promiseTitle: 'Trochę troski.\nO Ciebie. I o to miejsce.', promiseBody: 'Znalezienie spokojnego miejsca nie powinno odbierać mu spokoju. Wokół tej prostej myśli budujemy Stillhet.',
+      promisePlaces: 'Zapisane przez nas miejsca posłużą wyłącznie do proponowania obszarów do odkrywania. Użytkownicy nigdy nie będą mogli przeglądać naszej bazy ani wyszukiwać poszczególnych miejsc na liście czy w katalogu.',
       promise1: 'Obszary do odkrywania, bez ujawniania sekretnych zakątków.', promise2: 'Przemyślane propozycje, które pomagają rozpraszać ruch.', promise3: 'Bez feedu i publicznej historii wizyt. Z miejscem na prywatność.', promiseNote: 'weź oddech. zostaw tylko lekkie ślady.',
       closingEyebrow: 'COŚ SPOKOJNEGO ZAPUSZCZA KORZENIE.', closingTitle: 'Trochę mniej online.\nTrochę więcej życia.', closingBody: 'Stillhet dopiero kiełkuje. Zanim będzie gotowe, gdzieś tuż obok czeka pewnie kawałek nieba, drzewo albo cicha ścieżka.',
-      breatheCta: 'Weź z nami oddech', closingNote: 'do tego nie potrzebujesz aplikacji.', footerLine: 'Z myślą o spokojniejszym byciu w naturze.', footerStatus: 'Mały projekt w drodze',
+      breatheCta: 'Weź z nami oddech', closingNote: 'do tego nie potrzebujesz aplikacji.', footerLine: 'Z myślą o spokojniejszym byciu w naturze.', footerStatus: 'Mały projekt w drodze', footerContact: 'Kontakt · LinkedIn', footerContactLabel: 'Skontaktuj się z Żanetą na LinkedIn',
       breathingEyebrow: 'TYLKO TA CHWILA.', breathingTitle: 'Nie musisz być nigdzie indziej.', breathingCaption: 'Spokojna chwila. Podążaj za kołem we własnym tempie.', closeBreathing: 'Zamknij chwilę oddechu', breatheIn: 'Wdech…', breatheOut: 'Wydech…', breatheOwnPace: 'Oddychaj we własnym tempie.', pauseMotion: 'Wstrzymaj animacje', resumeMotion: 'Wznów animacje',
       resultTitles: { forest: 'Spokojny kawałek lasu.', lake: 'Trochę spokojnej wody.', meadow: 'Kawałek otwartego nieba.', hills: 'Łagodniejszy horyzont.' },
       resultBodies: { forest: 'Wyobraź sobie zapach sosen, trochę cienia i ścieżkę, która nigdzie się nie spieszy. Miejsce, w którym słychać coś innego niż telefon.', lake: 'Wyobraź sobie cichy brzeg, trzciny poruszane wiatrem i wodę, która nie ma Ci nic do powiedzenia. Usiądź na chwilę.', meadow: 'Wyobraź sobie ścieżkę w wysokiej trawie, kilka polnych kwiatów i miejsce na swobodne myśli. Nic do odhaczenia.', hills: 'Wyobraź sobie otwarte połoniny, delikatny wiatr w wysokich trawach i łagodne grzbiety ciągnące się po horyzont. Przestrzeń na oddech.' },
-      resultDistance: minutes => `Twoja mała ucieczka: do ${minutes} minut od domu.`,
+      resultDistance: kilometres => `Twoja mała ucieczka: do ${kilometres} km od domu.`,
       announcement: (index, title) => `Powitanie ${index + 1} z ${scenes.length}. ${title}`
     }
   };
@@ -76,6 +110,8 @@
   const sceneButtons = [...document.querySelectorAll('[data-scene]')];
   const motionButton = document.getElementById('motion-toggle');
   const breathingDialog = document.getElementById('breathing-dialog');
+  const memorySlides = [...document.querySelectorAll('[data-story-memory]')];
+  let memoryIndex = 0;
 
   function isMotionPaused() {
     if (motionPreference === 'true') return true;
@@ -99,7 +135,6 @@
     document.getElementById('welcome-first').textContent = words.first;
     document.getElementById('welcome-second').textContent = words.second;
     document.getElementById('welcome-accent').textContent = words.accent;
-    document.getElementById('welcome-description').textContent = words.description;
     const image = document.getElementById('welcome-image');
     if (image.getAttribute('src') !== scene.image) image.src = scene.image;
     image.alt = words.alt;
@@ -126,14 +161,52 @@
 
   function renderResult() {
     const nature = document.querySelector('input[name="nature"]:checked').value;
-    const minutes = document.querySelector('input[name="travel"]:checked').value;
+    const kilometres = document.querySelector('input[name="distance"]:checked').value;
     const scene = scenes.find(item => item.id === nature);
     const image = document.getElementById('result-image');
     image.src = scene.image;
     image.alt = scene[language].alt;
     document.getElementById('result-title').textContent = copy[language].resultTitles[nature];
     document.getElementById('result-description').textContent = copy[language].resultBodies[nature];
-    document.getElementById('result-distance').textContent = copy[language].resultDistance(minutes);
+    document.getElementById('result-distance').textContent = copy[language].resultDistance(kilometres);
+  }
+
+  function renderStoryMemory(announce = false) {
+    if (!memorySlides.length) return;
+    memorySlides.forEach((slide, index) => { slide.hidden = index !== memoryIndex; });
+    document.getElementById('story-gallery-controls').hidden = memorySlides.length < 2;
+    document.getElementById('story-memory-count').textContent = `${String(memoryIndex + 1).padStart(2, '0')} / ${String(memorySlides.length).padStart(2, '0')}`;
+    const announcement = document.getElementById('story-memory-announcement');
+    if (announce || announcement.textContent) announcement.textContent = `${copy[language].memoryAnnouncement(memoryIndex, memorySlides.length)} ${memorySlides[memoryIndex].alt}`;
+  }
+
+  function initializeStoryMemories() {
+    if (memorySlides.length < 2) return;
+    const frame = document.getElementById('story-memory-frame');
+    const controls = document.getElementById('story-gallery-controls');
+    function select(index) {
+      memoryIndex = (index + memorySlides.length) % memorySlides.length;
+      renderStoryMemory(true);
+    }
+    document.getElementById('previous-memory').addEventListener('click', () => select(memoryIndex - 1));
+    document.getElementById('next-memory').addEventListener('click', () => select(memoryIndex + 1));
+    for (const element of [frame, controls]) element.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      select(event.key === 'Home' ? 0 : event.key === 'End' ? memorySlides.length - 1 : memoryIndex + (event.key === 'ArrowRight' ? 1 : -1));
+    });
+    let gesture;
+    frame.addEventListener('pointerdown', event => {
+      if (event.isPrimary && event.button === 0) gesture = { x: event.clientX, y: event.clientY };
+    });
+    frame.addEventListener('pointerup', event => {
+      if (!gesture || !event.isPrimary) return;
+      const dx = event.clientX - gesture.x;
+      const dy = event.clientY - gesture.y;
+      gesture = null;
+      if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.25) select(memoryIndex + (dx < 0 ? 1 : -1));
+    });
+    for (const event of ['pointercancel', 'pointerleave']) frame.addEventListener(event, () => { gesture = null; });
   }
 
   function applyLanguage() {
@@ -146,12 +219,20 @@
       const text = copy[language][element.dataset.i18nAria];
       if (text) element.setAttribute('aria-label', text);
     });
-    document.querySelector('.hero').setAttribute('aria-roledescription', copy[language].carouselDescription);
+    document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+      const text = copy[language][element.dataset.i18nAlt];
+      if (text) element.alt = text;
+    });
+    document.querySelectorAll('[data-i18n-roledescription]').forEach(element => {
+      const text = copy[language][element.dataset.i18nRoledescription];
+      if (text) element.setAttribute('aria-roledescription', text);
+    });
     const languageButton = document.getElementById('language-toggle');
     languageButton.textContent = language === 'en' ? 'PL' : 'EN';
     languageButton.setAttribute('aria-label', language === 'en' ? 'Zmień język na polski' : 'Switch language to English');
     document.title = language === 'en' ? 'Stillhet — a little closer to quiet' : 'Stillhet — trochę bliżej spokoju';
     renderScene(sceneIndex);
+    renderStoryMemory();
     if (!document.getElementById('escape-result').hidden) renderResult();
     updateMotionControl();
     if (breathingDialog.open) tickBreathing();
@@ -549,9 +630,36 @@
     update();
   }
 
+  function initializeClosingTreeGrowth() {
+    const tree = document.querySelector('.closing-tree');
+    if (!tree || !('IntersectionObserver' in window)) return;
+    let visible = false;
+    let pageActive = true;
+
+    function update() {
+      const motionAllowed = !isMotionPaused();
+      // Prepare a seedling before it comes into view. The animation plays once.
+      if (motionAllowed) tree.classList.add('is-growing');
+      tree.classList.toggle('is-running', motionAllowed && visible && pageActive && !document.hidden);
+    }
+
+    new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting && entries[0].intersectionRatio >= .65;
+      update();
+    }, { threshold: .65 }).observe(tree);
+    new MutationObserver(update).observe(root, { attributes: true, attributeFilter: ['class'] });
+    reducedMotion.addEventListener('change', update);
+    document.addEventListener('visibilitychange', update);
+    window.addEventListener('pagehide', () => { pageActive = false; update(); });
+    window.addEventListener('pageshow', () => { pageActive = true; update(); });
+    update();
+  }
+
   applyLanguage();
   root.classList.add('js');
   initializeLandscapeMotion();
+  initializeClosingTreeGrowth();
+  initializeStoryMemories();
   if ('IntersectionObserver' in window && !reducedMotion.matches) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
