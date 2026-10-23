@@ -15,6 +15,7 @@
   {{ $style := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   <script id="welcome-data" type="application/json">{{ site.Data.welcome | jsonify | safeJS }}</script>
+  <script id="music-data" type="application/json">{{ site.Data.music | jsonify | safeJS }}</script>
   {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
 </head>
@@ -22,7 +23,9 @@
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   {{ partial "icons.html" . }}
   {{ partial "header.html" . }}
+  {{ partial "music-player.html" . }}
   <main id="main">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
+  <audio id="ambient-music" preload="none" hidden></audio>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<div class="music-player" id="music-player" hidden>
+  <button class="music-toggle" id="music-toggle" type="button" aria-label="Turn music on" title="Turn music on" aria-pressed="false" aria-expanded="false" aria-controls="music-playlist" aria-describedby="music-help">
+    <svg aria-hidden="true" focusable="false"><use id="music-speaker-icon" href="#icon-speaker-muted"/></svg>
+  </button>
+  <span class="sr-only" id="music-help" data-i18n="musicHelp">Hover, focus or tap to choose a track.</span>
+  <section class="music-playlist" id="music-playlist" aria-labelledby="music-title" hidden>
+    <div class="music-playlist-heading">
+      <h2 id="music-title" data-i18n="musicTitle">A little soundtrack</h2>
+      <button class="music-close" id="close-music-playlist" type="button" aria-label="Close playlist" data-i18n-aria="closePlaylist">×</button>
+    </div>
+    <ol class="music-tracks" id="music-tracks"></ol>
+    <p class="music-status" id="music-status" role="status" aria-live="polite">Music is off. Choose a track or turn the sound on.</p>
+  </section>
+</div>

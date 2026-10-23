@@ -1,0 +1,27 @@
+[
+  {
+    "id": "north",
+    "title": "North",
+    "src": "audio/north.mp3"
+  },
+  {
+    "id": "northern-air",
+    "title": "Northern Air",
+    "src": "audio/northern-air.mp3"
+  },
+  {
+    "id": "still-fjall",
+    "title": "Still Fjäll",
+    "src": "audio/still-fjall.mp3"
+  },
+  {
+    "id": "hogbergsvind",
+    "title": "Högbergsvind",
+    "src": "audio/hogbergsvind.mp3"
+  },
+  {
+    "id": "cold-air-horizon",
+    "title": "Cold Air Horizon",
+    "src": "audio/cold-air-horizon.mp3"
+  }
+]

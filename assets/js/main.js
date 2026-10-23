@@ -17,7 +17,7 @@
       step1Title: 'Choose nature and distance.', step1Body: 'Forest, water, meadows or hills? You’ll choose what appeals to you and how far from home you want to go.', step1Note: 'what you need, close to home',
       step2Title: 'Get one suggested area.', step2Body: 'Stillhet will suggest an area that fits, with the distance and practical details for your visit.', step2Note: 'less choosing, more going',
       step3Title: 'Put your phone away.', step3Body: 'You’ve got your little escape. Go slowly, look around, and leave the place just as peaceful as you found it.', step3Note: 'we’ll be here when you’re back',
-      previewEyebrow: 'TRY AN ILLUSTRATED PREVIEW.', previewTitle: 'A little glimpse\nof the idea.', previewBody: 'Choose a kind of nature and a distance in kilometres to see the idea in action. This sketch shows an imagined landscape; the future app is intended to suggest real areas nearby.', previewAnnotation: 'start with what you feel like →',
+      previewEyebrow: 'TRY AN ILLUSTRATED PREVIEW.', previewTitle: 'A little glimpse\nof the idea.', previewBody: 'Choose where you’d like to be and set a distance to see the idea in action. This sketch shows an imagined landscape; the future app is intended to suggest real areas nearby.', previewAnnotation: 'start with what you feel like →',
       development: 'Still in development. The app isn’t available to download yet.', paperLabel: 'A PAGE FROM OUR SKETCHBOOK', formTitle: 'Where would you like to unwind?', natureLegend: 'Choose the kind of nature you need',
       forest: 'Forest', lake: 'Water', meadow: 'Meadows', hills: 'Hills', distanceLegend: 'How far from home?', previewCta: 'Show an example',
       previewDisclaimer: 'An illustrated preview, not a real place recommendation.', tryAgain: 'Let your mind wander somewhere else',
@@ -42,6 +42,8 @@
       closingEyebrow: 'SOMETHING QUIET IS TAKING ROOT.', closingTitle: 'A little less online.\nA little more alive.', closingBody: 'Stillhet is still a seedling. Until it’s ready, there’s probably a patch of sky, a tree, or a quiet path waiting just outside.',
       breatheCta: 'Take a breath with us', closingNote: 'you don’t need an app for that.', footerLine: 'Made for a quieter kind of outside.', footerStatus: 'A little work in progress', footerContact: 'Contact · LinkedIn', footerContactLabel: 'Contact Żaneta on LinkedIn',
       breathingEyebrow: 'JUST THIS MOMENT.', breathingTitle: 'Nowhere else to be.', breathingCaption: 'A gentle pause. Follow the circle, at your own pace.', closeBreathing: 'Close breathing pause', breatheIn: 'Breathe in…', breatheOut: 'Breathe out…', breatheOwnPace: 'Breathe at your own pace.', pauseMotion: 'Pause animations', resumeMotion: 'Resume animations',
+      musicTitle: 'A little soundtrack', musicHelp: 'Hover, focus or tap to choose a track.', closePlaylist: 'Close playlist', musicOn: 'Turn music on', musicMute: 'Mute music', musicOff: 'Music is off. Choose a track or turn the sound on.', musicUnavailable: 'This track couldn’t play. Choose another or try again.', musicPaused: 'Music is paused while this page is in the background.', musicBlocked: 'Press the speaker to start the music.',
+      playTrack: title => `Play ${title}`, musicStarting: title => `Starting: ${title}`, musicPlaying: title => `Now playing: ${title}`,
       resultTitles: { forest: 'A quiet woodland.', lake: 'Some still water.', meadow: 'A little open sky.', hills: 'A softer horizon.' },
       resultBodies: { forest: 'Imagine the scent of pine, a little shade, and a path with no hurry in it. A place to listen to something other than your phone.', lake: 'Imagine a quiet bank, reeds moving in the breeze, and water with absolutely nothing to tell you. Sit a while.', meadow: 'Imagine a small path through long grass, a few wildflowers, and room for your thoughts to wander. Nothing to tick off.', hills: 'Imagine open mountain grasslands, a soft breeze in the long grass, and gentle ridges stretching into the distance. Room to breathe.' },
       resultDistance: kilometres => `Your daydream: within ${kilometres} km of home.`,
@@ -53,13 +55,13 @@
       heroDescription: 'Stillhet to powstająca aplikacja mobilna, która pomoże Ci znaleźć spokojne miejsca w naturze, blisko domu. Wybierz rodzaj natury i maksymalną odległość w kilometrach. Otrzymaj jedną propozycję obszaru na spacer lub chwilę odpoczynku.',
       carouselDescription: 'karuzela', sceneControls: 'Wybierz ekran powitalny', nextScene: 'Następny ekran powitalny', sceneNames: ['Powitanie w lesie', 'Powitanie nad wodą', 'Powitanie na łące', 'Powitanie na wzgórzach', 'Powitanie w dolinie'],
       marginNote: 'łagodniejszy sposób\nna małą ucieczkę', ideaEyebrow: 'CZYM JEST STILLHET?', ideaTitle: 'Koniec pracy.\nDokąd pojechać, żeby odpocząć?',
-      ideaBody: 'Cały dzień przed ekranem. Masz ochotę na spokojny spacer po lesie albo chwilę nad wodą, ale nie wiesz, dokąd pojechać — i nie masz już siły szukać.',
+      ideaBody: 'Cały dzień przed ekranem. Masz ochotę na spokojny spacer po lesie albo chwilę nad wodą, ale nie wiesz dokąd pojechać — i nie masz już siły szukać.',
       ideaBody2: 'Właśnie z myślą o takiej chwili powstaje Stillhet. Wybierzesz rodzaj natury i odległość od domu. Celem jest jedna przemyślana propozycja obszaru, z praktycznymi informacjami, które pomogą Ci podjąć decyzję i wyjść z domu.', meaning: 'stillhet / po norwesku: cisza, wyciszenie', storyLink: 'Dlaczego zaczęłam tworzyć Stillhet',
       howEyebrow: 'TAK MA DZIAŁAĆ APLIKACJA.', howTitle: 'Na zewnątrz, w trzech małych krokach.', howIntro: 'Na przykład: po pracy chcesz pójść do lasu, najwyżej 25 km od domu.',
       step1Title: 'Wybierz naturę i odległość.', step1Body: 'Las, woda, łąki czy wzgórza? Wybierzesz to, na co masz ochotę, i jak daleko od domu chcesz się wybrać.', step1Note: 'to, czego potrzebujesz, blisko domu',
       step2Title: 'Otrzymaj propozycję obszaru.', step2Body: 'Stillhet zaproponuje pasujący obszar, poda odległość i praktyczne informacje przydatne podczas wizyty.', step2Note: 'mniej wybierania, więcej bycia',
       step3Title: 'Odłóż telefon.', step3Body: 'Spokojne miejsce już czeka. Zwolnij, rozejrzyj się i zadbaj, by zachowało swój spokój.', step3Note: 'będziemy tu, kiedy wrócisz',
-      previewEyebrow: 'WYPRÓBUJ ILUSTROWANY PODGLĄD.', previewTitle: 'Mały podgląd\npomysłu.', previewBody: 'Wybierz rodzaj natury i odległość w kilometrach, żeby zobaczyć, na czym polega pomysł. Ten szkic pokazuje wyobrażony krajobraz; przyszła aplikacja ma proponować prawdziwe obszary w pobliżu.', previewAnnotation: 'zacznij od tego, na co masz ochotę →',
+      previewEyebrow: 'WYPRÓBUJ ILUSTROWANY PODGLĄD.', previewTitle: 'Mały podgląd\npomysłu.', previewBody: 'Wybierz gdzie chciałbyś się znaleźć i podaj odległość, żeby zobaczyć, na czym polega pomysł. Ten szkic pokazuje wyobrażony krajobraz; przyszła aplikacja ma proponować prawdziwe obszary w pobliżu.', previewAnnotation: 'zacznij od tego, na co masz ochotę →',
       development: 'Aplikacja wciąż powstaje. Nie jest jeszcze dostępna do pobrania.', paperLabel: 'KARTKA Z NASZEGO SZKICOWNIKA', formTitle: 'Gdzie chcesz odpocząć?', natureLegend: 'Wybierz rodzaj natury, którego potrzebujesz',
       forest: 'Las', lake: 'Woda', meadow: 'Łąki', hills: 'Wzgórza', distanceLegend: 'Jak daleko od domu?', previewCta: 'Pokaż przykład',
       previewDisclaimer: 'Ilustrowany podgląd, a nie rekomendacja prawdziwego miejsca.', tryAgain: 'Pozwól myślom powędrować gdzie indziej',
@@ -84,6 +86,8 @@
       closingEyebrow: 'COŚ SPOKOJNEGO ZAPUSZCZA KORZENIE.', closingTitle: 'Trochę mniej online.\nTrochę więcej życia.', closingBody: 'Stillhet dopiero kiełkuje. Zanim będzie gotowe, gdzieś tuż obok czeka pewnie kawałek nieba, drzewo albo cicha ścieżka.',
       breatheCta: 'Weź z nami oddech', closingNote: 'do tego nie potrzebujesz aplikacji.', footerLine: 'Z myślą o spokojniejszym byciu w naturze.', footerStatus: 'Mały projekt w drodze', footerContact: 'Kontakt · LinkedIn', footerContactLabel: 'Skontaktuj się z Żanetą na LinkedIn',
       breathingEyebrow: 'TYLKO TA CHWILA.', breathingTitle: 'Nie musisz być nigdzie indziej.', breathingCaption: 'Spokojna chwila. Podążaj za kołem we własnym tempie.', closeBreathing: 'Zamknij chwilę oddechu', breatheIn: 'Wdech…', breatheOut: 'Wydech…', breatheOwnPace: 'Oddychaj we własnym tempie.', pauseMotion: 'Wstrzymaj animacje', resumeMotion: 'Wznów animacje',
+      musicTitle: 'Trochę muzyki', musicHelp: 'Najedź, ustaw fokus lub dotknij, aby wybrać utwór.', closePlaylist: 'Zamknij playlistę', musicOn: 'Włącz muzykę', musicMute: 'Wycisz muzykę', musicOff: 'Muzyka jest wyłączona. Wybierz utwór lub włącz dźwięk.', musicUnavailable: 'Nie udało się odtworzyć utworu. Wybierz inny lub spróbuj ponownie.', musicPaused: 'Muzyka jest wstrzymana, gdy strona działa w tle.', musicBlocked: 'Naciśnij ikonę głośnika, aby włączyć muzykę.',
+      playTrack: title => `Odtwórz: ${title}`, musicStarting: title => `Włączanie: ${title}`, musicPlaying: title => `Teraz gra: ${title}`,
       resultTitles: { forest: 'Spokojny kawałek lasu.', lake: 'Trochę spokojnej wody.', meadow: 'Kawałek otwartego nieba.', hills: 'Łagodniejszy horyzont.' },
       resultBodies: { forest: 'Wyobraź sobie zapach sosen, trochę cienia i ścieżkę, która nigdzie się nie spieszy. Miejsce, w którym słychać coś innego niż telefon.', lake: 'Wyobraź sobie cichy brzeg, trzciny poruszane wiatrem i wodę, która nie ma Ci nic do powiedzenia. Usiądź na chwilę.', meadow: 'Wyobraź sobie ścieżkę w wysokiej trawie, kilka polnych kwiatów i miejsce na swobodne myśli. Nic do odhaczenia.', hills: 'Wyobraź sobie otwarte połoniny, delikatny wiatr w wysokich trawach i łagodne grzbiety ciągnące się po horyzont. Przestrzeń na oddech.' },
       resultDistance: kilometres => `Twoja mała ucieczka: do ${kilometres} km od domu.`,
@@ -97,6 +101,7 @@
   };
   let language = storage.get('stillhet-language') === 'pl' ? 'pl' : 'en';
   let motionPreference = storage.get('stillhet-motion-paused');
+  let refreshMusicLabels = () => {};
   const savedScene = storage.get('stillhet-welcome');
   const lastScene = savedScene === null ? -1 : Number(savedScene);
   let sceneIndex = Number.isInteger(lastScene) && lastScene >= -1 ? (lastScene + 1) % scenes.length : 0;
@@ -121,11 +126,192 @@
 
   function updateMotionControl() {
     const paused = isMotionPaused();
+    const label = copy[language][paused ? 'resumeMotion' : 'pauseMotion'];
     root.classList.toggle('motion-paused', paused);
     root.classList.toggle('motion-enabled', motionPreference === 'false');
     motionButton.setAttribute('aria-pressed', String(paused));
-    motionButton.setAttribute('aria-label', copy[language][paused ? 'resumeMotion' : 'pauseMotion']);
+    motionButton.setAttribute('aria-label', label);
+    motionButton.title = label;
     motionButton.textContent = paused ? '▷' : 'Ⅱ';
+  }
+
+  function initializeMusicPlayer() {
+    const player = document.getElementById('music-player');
+    const audio = document.getElementById('ambient-music');
+    const tracks = JSON.parse(document.getElementById('music-data').textContent);
+    if (!tracks.length) return;
+    const toggle = document.getElementById('music-toggle');
+    const icon = document.getElementById('music-speaker-icon');
+    const panel = document.getElementById('music-playlist');
+    const list = document.getElementById('music-tracks');
+    const status = document.getElementById('music-status');
+    let selected = 0;
+    let requested = storage.get('stillhet-music-muted') !== 'true';
+    let failed = false;
+    let autoplayBlocked = false;
+    let pending = false;
+    let request = 0;
+    let pageActive = true;
+    let ignoreFocusOpen = false;
+    const buttons = tracks.map((track, index) => {
+      const item = document.createElement('li');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'music-track';
+      const number = document.createElement('span');
+      number.className = 'music-track-number';
+      number.textContent = String(index + 1).padStart(2, '0');
+      number.setAttribute('aria-hidden', 'true');
+      const title = document.createElement('span');
+      title.textContent = track.title;
+      button.append(number, title);
+      button.addEventListener('click', () => selectTrack(index));
+      item.append(button);
+      list.append(item);
+      return button;
+    });
+    audio.volume = .3;
+    audio.muted = true;
+    audio.src = tracks[0].src;
+
+    function render() {
+      const words = copy[language];
+      const label = words[requested ? 'musicMute' : 'musicOn'];
+      audio.muted = !shouldPlay();
+      toggle.setAttribute('aria-label', label);
+      toggle.setAttribute('aria-pressed', String(requested));
+      toggle.setAttribute('aria-busy', String(pending));
+      toggle.title = label;
+      icon.setAttribute('href', requested ? '#icon-speaker' : '#icon-speaker-muted');
+      buttons.forEach((button, index) => {
+        button.setAttribute('aria-pressed', String(index === selected));
+        button.setAttribute('aria-label', words.playTrack(tracks[index].title));
+        button.classList.toggle('is-selected', index === selected);
+      });
+      status.textContent = failed ? words.musicUnavailable : autoplayBlocked ? words.musicBlocked : !requested ? words.musicOff
+        : pending ? words.musicStarting(tracks[selected].title)
+        : audio.paused ? words.musicPaused : words.musicPlaying(tracks[selected].title);
+    }
+
+    function shouldPlay() {
+      return requested && !document.hidden && pageActive;
+    }
+
+    function fail(blocked = false) {
+      requested = false;
+      failed = !blocked;
+      autoplayBlocked = blocked;
+      pending = false;
+      request++;
+      audio.muted = true;
+      audio.pause();
+      render();
+    }
+
+    async function sync() {
+      const currentRequest = ++request;
+      if (!shouldPlay()) {
+        pending = false;
+        audio.pause();
+        render();
+        return;
+      }
+      pending = true;
+      render();
+      try {
+        await audio.play();
+        // Ignore obsolete failures; a late success must still honor mute or suspension.
+        if (!shouldPlay()) audio.pause();
+      } catch (error) {
+        if (currentRequest === request && shouldPlay()) fail(error.name === 'NotAllowedError');
+      } finally {
+        if (currentRequest === request) {
+          pending = false;
+          render();
+        }
+      }
+    }
+
+    function selectTrack(index) {
+      request++;
+      pending = true;
+      audio.pause();
+      selected = (index + tracks.length) % tracks.length;
+      audio.src = tracks[selected].src;
+      requested = true;
+      failed = false;
+      autoplayBlocked = false;
+      storage.set('stillhet-music-muted', 'false');
+      void sync();
+    }
+
+    function setOpen(open, restoreFocus = false) {
+      panel.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      if (restoreFocus) {
+        ignoreFocusOpen = true;
+        toggle.focus({ preventScroll: true });
+        ignoreFocusOpen = false;
+      }
+    }
+
+    toggle.addEventListener('click', () => {
+      requested = !requested;
+      failed = false;
+      autoplayBlocked = false;
+      storage.set('stillhet-music-muted', String(!requested));
+      setOpen(true);
+      render();
+      void sync();
+    });
+    player.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') setOpen(true); });
+    player.addEventListener('pointerleave', event => {
+      if (event.pointerType === 'touch') return;
+      const active = document.activeElement;
+      if (player.contains(active) && active.matches(':focus-visible')) return;
+      setOpen(false);
+    });
+    player.addEventListener('focusin', () => { if (!ignoreFocusOpen) setOpen(true); });
+    player.addEventListener('focusout', event => { if (!player.contains(event.relatedTarget)) setOpen(false); });
+    player.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setOpen(false, true);
+      } else if (event.key === 'ArrowDown' && event.target === toggle) {
+        event.preventDefault();
+        setOpen(true);
+        buttons[selected].focus();
+      }
+    });
+    list.addEventListener('keydown', event => {
+      const index = buttons.indexOf(document.activeElement);
+      if (index < 0 || !['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1
+        : (index + (event.key === 'ArrowDown' ? 1 : -1) + buttons.length) % buttons.length;
+      buttons[next].focus();
+    });
+    document.getElementById('close-music-playlist').addEventListener('click', () => setOpen(false, true));
+    document.addEventListener('pointerdown', event => { if (!player.contains(event.target)) setOpen(false); });
+    audio.addEventListener('ended', () => { if (requested && audio.ended) selectTrack(selected + 1); });
+    audio.addEventListener('error', () => { if (requested && audio.error) fail(); });
+    audio.addEventListener('pause', () => {
+      // A system media pause affects music only, never the landscape motion.
+      if (!audio.paused || pending || !shouldPlay()) return;
+      requested = false;
+      request++;
+      render();
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) setOpen(false);
+      void sync();
+    });
+    window.addEventListener('pagehide', () => { pageActive = false; void sync(); });
+    window.addEventListener('pageshow', () => { pageActive = true; void sync(); });
+    refreshMusicLabels = render;
+    render();
+    player.hidden = false;
+    void sync();
   }
 
   function renderScene(index, announce = false) {
@@ -235,6 +421,7 @@
     renderStoryMemory();
     if (!document.getElementById('escape-result').hidden) renderResult();
     updateMotionControl();
+    refreshMusicLabels();
     if (breathingDialog.open) tickBreathing();
   }
 
@@ -657,6 +844,7 @@
 
   applyLanguage();
   root.classList.add('js');
+  initializeMusicPlayer();
   initializeLandscapeMotion();
   initializeClosingTreeGrowth();
   initializeStoryMemories();
